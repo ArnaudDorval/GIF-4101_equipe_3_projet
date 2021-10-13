@@ -1,4 +1,5 @@
 from temperature_fetch import *
+from hospital_fetch import *
 import time
 
 

@@ -11,14 +11,14 @@ def fetchDonneesQuebec():
     cr = csv.reader(content.splitlines(), delimiter=',')
     data = list(cr)
     updateTime = (data[2][8])
-    f_ = open('./prevUpdate.txt', 'r')
+    f_ = open('../DataFetchQc/prevUpdate.txt', 'r')
     prevUpdateTime = f_.read()
     f_.close()
     if updateTime != prevUpdateTime:
-        f__ = open('./prevUpdate.txt', 'w')
+        f__ = open('../DataFetchQc/prevUpdate.txt', 'w')
         f__.write(updateTime)
         f__.close()
-        f = open('./Data.txt', 'a')
+        f = open('../DataFetchQc/Data.txt', 'a')
         for l in data:
             if l[0] in lieux:
                 for l_ in l:
