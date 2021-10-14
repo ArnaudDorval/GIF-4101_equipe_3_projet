@@ -11,11 +11,11 @@ def fetchDonneesQuebec():
     cr = csv.reader(content.splitlines(), delimiter=',')
     data = list(cr)
     updateTime = (data[2][8])
-    f_ = open('../DataFetchQc/prevUpdate.txt', 'r')
+    f_ = open('data/prevUpdate.txt', 'r')
     prevUpdateTime = f_.read()
     f_.close()
     if updateTime != prevUpdateTime:
-        f__ = open('../DataFetchQc/prevUpdate.txt', 'w')
+        f__ = open('data/prevUpdate.txt', 'w')
         f__.write(updateTime)
         f__.close()
         f = open('../DataFetchQc/Data.txt', 'a')
@@ -34,17 +34,21 @@ def fetch_Donnees_Quebec_Data_Frame():
     cr = csv.reader(content.splitlines(), delimiter=',')
     data = list(cr)
     updateTime = (data[2][8])
-    f_ = open('../DataFetchQc/prevUpdate.txt', 'r')
+    f_ = open('data/prevUpdate.txt', 'r')
     prevUpdateTime = f_.read()
     f_.close()
     hospital_list = []
     if updateTime != prevUpdateTime:
+        f_ = open('data/prevUpdate.txt', 'w')
+        f_.write(updateTime)
+        f_.close()
         for l in data:
             buff = ""
             if l[0] in lieux:
                 for l_ in l:
                     buff += l_ + ";"
                 hospital_list.append(buff)
+
 
 
     return hospital_list
