@@ -28,4 +28,23 @@ def fetchDonneesQuebec():
         f.close()
 
 
-fetchDonneesQuebec()
+def fetch_Donnees_Quebec_Data_Frame():
+    resp = requests.get(CSV_URL)
+    content = resp.content.decode('utf-8', errors='ignore')
+    cr = csv.reader(content.splitlines(), delimiter=',')
+    data = list(cr)
+    updateTime = (data[2][8])
+    f_ = open('../DataFetchQc/prevUpdate.txt', 'r')
+    prevUpdateTime = f_.read()
+    f_.close()
+    hospital_list = []
+    if updateTime != prevUpdateTime:
+        for l in data:
+            buff = ""
+            if l[0] in lieux:
+                for l_ in l:
+                    buff += l_ + ";"
+                hospital_list.append(buff)
+
+
+    return hospital_list

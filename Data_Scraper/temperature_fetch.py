@@ -61,4 +61,5 @@ class Temperature:
         temp_str = self.heure + ";" + self.temperature_value + ";" \
                    + self.climat + ";" + self.vent + ";" + self.humidex \
                    + ";" + self.humidite_relative
+
         return temp_str
