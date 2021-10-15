@@ -36,5 +36,6 @@ while (1):
             print(t)
         f.close()
 
+    print(str(datetime.datetime.now()))
     time.sleep(60*15)
-    print(str(datetime.now()))
+

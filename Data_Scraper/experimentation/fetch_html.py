@@ -29,8 +29,9 @@ print("************************************************************************"
 print("temperature")
 temperature = tags[2]
 temp_list = str(temperature).split('>')
-temp_list = temp_list[1].split('\n')
-print(temp_list[0])
+temp_str = temp_list[1].split('\n')[0]
+print(temperature)
+print(temp_list)
 print("************************************************************************")
 print("vent km/h")
 vent = tags[4]
