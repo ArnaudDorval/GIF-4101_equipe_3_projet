@@ -14,7 +14,6 @@ def git_push():
     repo.index.commit(COMMIT_MESSAGE)
     origin = repo.remote(name='origin')
     origin.push()
-    #        print('Some error occured while pushing the code')
 
 
 file_name = 'data/' + str(date.today()) + "-test.txt"
