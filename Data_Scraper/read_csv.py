@@ -28,8 +28,8 @@ hopital_jesus = data[data['Nom_installation'] == "Hpital de l'Enfant-Jsus"]
 hopital_sacrament = data[data['Nom_installation'] == "Hpital du Saint-Sacrement"]
 hopital_cardiologie = data[data['Nom_installation'] == "Institut universitaire de cardiologie et de pneumologie de Qubec"]
 
-#data.plot(kind='scatter',x='heure_meteo',y='Nombre_de_civieres_occupees',color='red')
-#plt.show()
+data.plot(kind='scatter',x='heure_meteo',y='temperature',color='red')
+plt.show()
 
 y_data = "Nombre_de_civieres_occupees"
 x_data = "heure_meteo"
