@@ -1,2 +1,0 @@
-DEBUG:git.util:Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
-DEBUG:git.cmd:Popen(['git', 'pull', '-v', 'origin'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=True, shell=None, istream=None)
