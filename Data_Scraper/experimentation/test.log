@@ -1,18 +1,11 @@
 DEBUG:git.util:Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
-DEBUG:git.cmd:Popen(['git', 'pull', 'origin'], cwd=None, universal_newlines=False, shell=None, istream=None)
-DEBUG:git.cmd:Popen(['git', 'add', '--all'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=None)
-DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=<valid stream>)
-DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=<valid stream>)
-DEBUG:git.cmd:Popen(['git', 'push', '--porcelain', 'origin'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=True, shell=None, istream=None)
-DEBUG:git.util:Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
-DEBUG:git.cmd:Popen(['git', 'pull'], cwd=None, universal_newlines=False, shell=None, istream=None)
-DEBUG:git.cmd:Popen(['git', 'add', '--all'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=None)
-DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=<valid stream>)
-DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=<valid stream>)
-DEBUG:git.cmd:Popen(['git', 'push', '--porcelain', 'origin'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=True, shell=None, istream=None)
-DEBUG:git.util:Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
-DEBUG:git.cmd:Popen(['git', 'pull'], cwd=None, universal_newlines=False, shell=None, istream=None)
-DEBUG:git.cmd:Popen(['git', 'add', '--all'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=None)
-DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=<valid stream>)
-DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=<valid stream>)
-DEBUG:git.cmd:Popen(['git', 'push', '--porcelain', 'origin'], cwd=C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet, universal_newlines=True, shell=None, istream=None)
+INFO:root:2021-10-17 18:31:45.891135
+ERROR:root:
+Traceback (most recent call last):
+  File "C:/Users/arnau/OneDrive/Documents/Universite/Automne 2021/AI/projet/GIF-4101_equipe_3_projet/Data_Scraper/experimentation/git_add_test.py", line 34, in <module>
+    git_push()
+  File "C:/Users/arnau/OneDrive/Documents/Universite/Automne 2021/AI/projet/GIF-4101_equipe_3_projet/Data_Scraper/experimentation/git_add_test.py", line 18, in git_push
+    t = git.Repo('GIF-4101_equipe_3_projet')
+  File "C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet\venv\lib\site-packages\git\repo\base.py", line 152, in __init__
+    raise NoSuchPathError(epath)
+git.exc.NoSuchPathError: C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet\Data_Scraper\experimentation\GIF-4101_equipe_3_projet
