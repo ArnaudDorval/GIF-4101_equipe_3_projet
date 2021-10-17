@@ -13,6 +13,7 @@ PATH_OF_GIT_REPO = r'/home/pi/GIF-4101_equipe_3_projet/.git'
 
 def git_push():
     repo = Repo(PATH_OF_GIT_REPO)
+    repo.remotes.origin.pull()
     repo.git.add(all=True)
     repo.index.commit(COMMIT_MESSAGE)
     origin = repo.remote(name='origin')
@@ -68,7 +69,7 @@ while (1):
         logging.info(str(datetime.datetime.now()))
         logging.exception('')
         time.sleep(60 * 15)
-        continue()
+        continue
 
 
 

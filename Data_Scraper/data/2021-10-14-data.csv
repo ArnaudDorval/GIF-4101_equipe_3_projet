@@ -1,0 +1,55 @@
+Nom_etablissement;Nom_installation;No_permis_installation;Nombre_de_civieres_fonctionnelles;Nombre_de_civieres_occupees;Nombre_de_patients_sur_civiere_plus_de_24_heures;Nombre_de_patients_sur_civiere_plus_de_48_heures;Heure_de_l'extraction_(image);Mise_a_jour;heure_meteo;temperature;climat;vent;humidex;humidite_relative
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;47;9;1;15:00:00;2021-10-14T15:28;15:00;16;Généralement nuageux;ENE 12;*;81
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;45;22;5;15:00:00;2021-10-14T15:28;15:00;16;Généralement nuageux;ENE 12;*;81
+CHU;L'Htel-Dieu de Qubec;51217586;15;18;4;1;15:00:00;2021-10-14T15:28;15:00;16;Généralement nuageux;ENE 12;*;81
+CHU;Hpital de l'Enfant-Jsus;51233914;48;50;12;3;15:00:00;2021-10-14T15:28;15:00;16;Généralement nuageux;ENE 12;*;81
+CHU;Hpital du Saint-Sacrement;51217529;22;24;12;3;15:00:00;2021-10-14T15:28;15:00;16;Généralement nuageux;ENE 12;*;81
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;21;2;0;15:00:00;2021-10-14T15:28;15:00;16;Généralement nuageux;ENE 12;*;81
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;49;9;1;16:00:00;2021-10-14T16:28;16:00;15;Généralement nuageux;E 13;*;81
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;43;19;3;16:00:00;2021-10-14T16:28;16:00;15;Généralement nuageux;E 13;*;81
+CHU;L'Htel-Dieu de Qubec;51217586;15;17;3;0;16:00:00;2021-10-14T16:28;16:00;15;Généralement nuageux;E 13;*;81
+CHU;Hpital de l'Enfant-Jsus;51233914;48;46;12;3;16:00:00;2021-10-14T16:28;16:00;15;Généralement nuageux;E 13;*;81
+CHU;Hpital du Saint-Sacrement;51217529;22;23;11;2;16:00:00;2021-10-14T16:28;16:00;15;Généralement nuageux;E 13;*;81
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;19;1;0;16:00:00;2021-10-14T16:28;16:00;15;Généralement nuageux;E 13;*;81
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;48;8;1;17:00:00;2021-10-14T17:28;17:00;15;Généralement nuageux;ENE 16;;53
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;43;18;4;17:00:00;2021-10-14T17:28;17:00;15;Généralement nuageux;ENE 16;;53
+CHU;L'Htel-Dieu de Qubec;51217586;15;19;4;0;17:00:00;2021-10-14T17:28;17:00;15;Généralement nuageux;ENE 16;;53
+CHU;Hpital de l'Enfant-Jsus;51233914;48;45;11;3;17:00:00;2021-10-14T17:28;17:00;15;Généralement nuageux;ENE 16;;53
+CHU;Hpital du Saint-Sacrement;51217529;22;24;11;2;17:00:00;2021-10-14T17:28;17:00;15;Généralement nuageux;ENE 16;;53
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;18;0;0;17:00:00;2021-10-14T17:28;17:00;15;Généralement nuageux;ENE 16;;53
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;50;7;1;18:00:00;2021-10-14T18:28;18:00;14;Généralement nuageux;E 17;;53
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;39;16;3;18:00:00;2021-10-14T18:28;18:00;14;Généralement nuageux;E 17;;53
+CHU;L'Htel-Dieu de Qubec;51217586;15;16;3;0;18:00:00;2021-10-14T18:28;18:00;14;Généralement nuageux;E 17;;53
+CHU;Hpital de l'Enfant-Jsus;51233914;48;45;9;2;18:00:00;2021-10-14T18:28;18:00;14;Généralement nuageux;E 17;;53
+CHU;Hpital du Saint-Sacrement;51217529;22;25;12;2;18:00:00;2021-10-14T18:28;18:00;14;Généralement nuageux;E 17;;53
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;19;0;0;18:00:00;2021-10-14T18:28;18:00;14;Généralement nuageux;E 17;;53
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;46;5;1;19:00:00;2021-10-14T19:28;19:00;13;Généralement nuageux;E 11;;53
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;37;14;3;19:00:00;2021-10-14T19:28;19:00;13;Généralement nuageux;E 11;;53
+CHU;L'Htel-Dieu de Qubec;51217586;15;17;3;0;19:00:00;2021-10-14T19:28;19:00;13;Généralement nuageux;E 11;;53
+CHU;Hpital de l'Enfant-Jsus;51233914;48;45;10;2;19:00:00;2021-10-14T19:28;19:00;13;Généralement nuageux;E 11;;53
+CHU;Hpital du Saint-Sacrement;51217529;22;21;10;2;19:00:00;2021-10-14T19:28;19:00;13;Généralement nuageux;E 11;;53
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;20;0;0;19:00:00;2021-10-14T19:28;19:00;13;Généralement nuageux;E 11;;53
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;45;6;0;20:00:00;2021-10-14T20:28;20:00;13;Généralement nuageux;ENE 10;;53
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;36;13;3;20:00:00;2021-10-14T20:28;20:00;13;Généralement nuageux;ENE 10;;53
+CHU;L'Htel-Dieu de Qubec;51217586;15;16;3;0;20:00:00;2021-10-14T20:28;20:00;13;Généralement nuageux;ENE 10;;53
+CHU;Hpital de l'Enfant-Jsus;51233914;48;51;14;2;20:00:00;2021-10-14T20:28;20:00;13;Généralement nuageux;ENE 10;;53
+CHU;Hpital du Saint-Sacrement;51217529;22;22;10;2;20:00:00;2021-10-14T20:28;20:00;13;Généralement nuageux;ENE 10;;53
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;21;0;0;20:00:00;2021-10-14T20:28;20:00;13;Généralement nuageux;ENE 10;;53
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;41;5;0;21:00:00;2021-10-14T21:28;21:00;13;Généralement nuageux;ENE 13;;53
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;33;12;4;21:00:00;2021-10-14T21:28;21:00;13;Généralement nuageux;ENE 13;;53
+CHU;L'Htel-Dieu de Qubec;51217586;15;16;2;0;21:00:00;2021-10-14T21:28;21:00;13;Généralement nuageux;ENE 13;;53
+CHU;Hpital de l'Enfant-Jsus;51233914;48;52;14;2;21:00:00;2021-10-14T21:28;21:00;13;Généralement nuageux;ENE 13;;53
+CHU;Hpital du Saint-Sacrement;51217529;22;22;10;2;21:00:00;2021-10-14T21:28;21:00;13;Généralement nuageux;ENE 13;;53
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;20;0;0;21:00:00;2021-10-14T21:28;21:00;13;Généralement nuageux;ENE 13;;53
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;38;5;0;22:00:00;2021-10-14T22:28;22:00;<span class="highLow";Généralement nuageux;NE 10;;51
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;31;11;3;22:00:00;2021-10-14T22:28;22:00;<span class="highLow";Généralement nuageux;NE 10;;51
+CHU;L'Htel-Dieu de Qubec;51217586;15;16;2;0;22:00:00;2021-10-14T22:28;22:00;<span class="highLow";Généralement nuageux;NE 10;;51
+CHU;Hpital de l'Enfant-Jsus;51233914;48;55;15;2;22:00:00;2021-10-14T22:28;22:00;<span class="highLow";Généralement nuageux;NE 10;;51
+CHU;Hpital du Saint-Sacrement;51217529;22;24;10;2;22:00:00;2021-10-14T22:28;22:00;<span class="highLow";Généralement nuageux;NE 10;;51
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;22;0;0;22:00:00;2021-10-14T22:28;22:00;<span class="highLow";Généralement nuageux;NE 10;;51
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;38;4;0;23:00:00;2021-10-14T23:28;23:00;13;Généralement nuageux;ENE 12;;53
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;32;10;3;23:00:00;2021-10-14T23:28;23:00;13;Généralement nuageux;ENE 12;;53
+CHU;L'Htel-Dieu de Qubec;51217586;15;14;1;0;23:00:00;2021-10-14T23:28;23:00;13;Généralement nuageux;ENE 12;;53
+CHU;Hpital de l'Enfant-Jsus;51233914;48;55;15;2;23:00:00;2021-10-14T23:28;23:00;13;Généralement nuageux;ENE 12;;53
+CHU;Hpital du Saint-Sacrement;51217529;22;23;9;2;23:00:00;2021-10-14T23:28;23:00;13;Généralement nuageux;ENE 12;;53
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;20;0;0;23:00:00;2021-10-14T23:28;23:00;13;Généralement nuageux;ENE 12;;53
