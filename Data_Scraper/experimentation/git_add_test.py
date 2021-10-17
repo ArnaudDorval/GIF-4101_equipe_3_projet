@@ -15,7 +15,7 @@ logging.basicConfig(filename='test.log', level=logging.DEBUG)
 
 def git_push():
     repo = Repo(PATH_OF_GIT_REPO)
-    t = git.Repo(PATH_OF_GIT_REPO)
+    #t = git.Repo(PATH_OF_GIT_REPO)
     o = repo.remotes.origin
     o.pull()
     repo.git.add(all=True)
