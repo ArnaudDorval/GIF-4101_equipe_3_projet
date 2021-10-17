@@ -1,12 +1,2 @@
-INFO:root:2021-10-17 18:38:01.492590
-ERROR:root:
-Traceback (most recent call last):
-  File "/home/pi/GIF-4101_equipe_3_projet/Data_Scraper/experimentation/git_add_test.py", line 29, in <module>
-    git_push()
-  File "/home/pi/GIF-4101_equipe_3_projet/Data_Scraper/experimentation/git_add_test.py", line 14, in git_push
-    repo = Repo(PATH_OF_GIT_REPO)
-  File "/home/pi/.local/lib/python3.7/site-packages/git/repo/base.py", line 152, in __init__
-    raise NoSuchPathError(epath)
-git.exc.NoSuchPathError: /home/pi/GIF-4101_equipe_3_projet/Data_Scraper/experimentation/C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet\.git
 DEBUG:git.cmd:Popen(['git', 'pull', '-v', 'origin'], cwd=/home/pi/GIF-4101_equipe_3_projet, universal_newlines=True, shell=None, istream=None)
 DEBUG:git.cmd:Popen(['git', 'add', '--all'], cwd=/home/pi/GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=None)
