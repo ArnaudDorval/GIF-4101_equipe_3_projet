@@ -4,6 +4,20 @@ import time
 from datetime import date
 import os
 import logging
+from git import Repo
+
+
+PATH_OF_GIT_REPO = r'C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet\.git'
+COMMIT_MESSAGE = 'Push data files for the day'
+
+def git_push():
+    repo = Repo(PATH_OF_GIT_REPO)
+    repo.git.add(all=True)
+    repo.index.commit(COMMIT_MESSAGE)
+    origin = repo.remote(name='origin')
+    origin.push()
+
+
 
 logging.basicConfig(filename='data/error_logging.log', encoding='utf-8', level=logging.DEBUG)
 
@@ -28,6 +42,7 @@ while (1):
         buf_name = 'data/' + str(date.today()) + "-data.csv"
 
         if(not os.path.isfile(buf_name)):
+            git_push()
             f = open(buf_name, "x")
             f.write(data)
             f.close()
