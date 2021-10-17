@@ -1,0 +1,31 @@
+Nom_etablissement;Nom_installation;No_permis_installation;Nombre_de_civieres_fonctionnelles;Nombre_de_civieres_occupees;Nombre_de_patients_sur_civiere_plus_de_24_heures;Nombre_de_patients_sur_civiere_plus_de_48_heures;Heure_de_l'extraction_(image);Mise_a_jour;heure_meteo;temperature;climat;vent;humidex;humidite_relative
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;42;1;0;19:00:00;2021-10-15T19:28; 19:00 ;15,5;Nuageux;NE 8;NA;90
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;27;8;3;19:00:00;2021-10-15T19:28; 19:00 ;15,5;Nuageux;NE 8;NA;90
+CHU;L'Htel-Dieu de Qubec;51217586;15;16;2;0;19:00:00;2021-10-15T19:28; 19:00 ;15,5;Nuageux;NE 8;NA;90
+CHU;Hpital de l'Enfant-Jsus;51233914;48;46;9;2;19:00:00;2021-10-15T19:28; 19:00 ;15,5;Nuageux;NE 8;NA;90
+CHU;Hpital du Saint-Sacrement;51217529;22;25;11;6;19:00:00;2021-10-15T19:28; 19:00 ;15,5;Nuageux;NE 8;NA;90
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;17;0;0;19:00:00;2021-10-15T19:28; 19:00 ;15,5;Nuageux;NE 8;NA;90
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;42;1;0;20:00:00;2021-10-15T20:28; 20:00 ;15,5;Nuageux;calme;NA;90
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;28;8;3;20:00:00;2021-10-15T20:28; 20:00 ;15,5;Nuageux;calme;NA;90
+CHU;L'Htel-Dieu de Qubec;51217586;15;15;3;0;20:00:00;2021-10-15T20:28; 20:00 ;15,5;Nuageux;calme;NA;90
+CHU;Hpital de l'Enfant-Jsus;51233914;48;47;11;3;20:00:00;2021-10-15T20:28; 20:00 ;15,5;Nuageux;calme;NA;90
+CHU;Hpital du Saint-Sacrement;51217529;22;25;12;6;20:00:00;2021-10-15T20:28; 20:00 ;15,5;Nuageux;calme;NA;90
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;17;0;0;20:00:00;2021-10-15T20:28; 20:00 ;15,5;Nuageux;calme;NA;90
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;38;1;0;21:00:00;2021-10-15T21:28; 21:00 ;14,8;Pluie faible;SE 9;NA;98
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;29;7;2;21:00:00;2021-10-15T21:28; 21:00 ;14,8;Pluie faible;SE 9;NA;98
+CHU;L'Htel-Dieu de Qubec;51217586;15;13;3;0;21:00:00;2021-10-15T21:28; 21:00 ;14,8;Pluie faible;SE 9;NA;98
+CHU;Hpital de l'Enfant-Jsus;51233914;48;51;13;3;21:00:00;2021-10-15T21:28; 21:00 ;14,8;Pluie faible;SE 9;NA;98
+CHU;Hpital du Saint-Sacrement;51217529;22;24;11;5;21:00:00;2021-10-15T21:28; 21:00 ;14,8;Pluie faible;SE 9;NA;98
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;15;0;0;21:00:00;2021-10-15T21:28; 21:00 ;14,8;Pluie faible;SE 9;NA;98
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;37;1;0;22:00:00;2021-10-15T22:28; 22:00 ;14,7;Bruine faible;ENE 8;NA;98
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;31;7;2;22:00:00;2021-10-15T22:28; 22:00 ;14,7;Bruine faible;ENE 8;NA;98
+CHU;L'Htel-Dieu de Qubec;51217586;15;15;3;0;22:00:00;2021-10-15T22:28; 22:00 ;14,7;Bruine faible;ENE 8;NA;98
+CHU;Hpital de l'Enfant-Jsus;51233914;48;46;11;3;22:00:00;2021-10-15T22:28; 22:00 ;14,7;Bruine faible;ENE 8;NA;98
+CHU;Hpital du Saint-Sacrement;51217529;22;25;11;5;22:00:00;2021-10-15T22:28; 22:00 ;14,7;Bruine faible;ENE 8;NA;98
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;14;0;0;22:00:00;2021-10-15T22:28; 22:00 ;14,7;Bruine faible;ENE 8;NA;98
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;36;2;0;23:00:00;2021-10-15T23:28; 23:00 ;13,1;Généralement nuageux;ENE 12;NA;91
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;34;7;2;23:00:00;2021-10-15T23:28; 23:00 ;13,1;Généralement nuageux;ENE 12;NA;91
+CHU;L'Htel-Dieu de Qubec;51217586;15;16;3;0;23:00:00;2021-10-15T23:28; 23:00 ;13,1;Généralement nuageux;ENE 12;NA;91
+CHU;Hpital de l'Enfant-Jsus;51233914;48;46;10;3;23:00:00;2021-10-15T23:28; 23:00 ;13,1;Généralement nuageux;ENE 12;NA;91
+CHU;Hpital du Saint-Sacrement;51217529;22;21;8;3;23:00:00;2021-10-15T23:28; 23:00 ;13,1;Généralement nuageux;ENE 12;NA;91
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;12;0;0;23:00:00;2021-10-15T23:28; 23:00 ;13,1;Généralement nuageux;ENE 12;NA;91

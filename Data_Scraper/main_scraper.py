@@ -7,8 +7,9 @@ import logging
 from git import Repo
 
 
-PATH_OF_GIT_REPO = r'C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet\.git'
+#PATH_OF_GIT_REPO = r'C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet\.git'
 COMMIT_MESSAGE = 'Push data files for the day'
+PATH_OF_GIT_REPO = r'/home/pi/GIF-4101_equipe_3_projet/.git'
 
 def git_push():
     repo = Repo(PATH_OF_GIT_REPO)
@@ -19,7 +20,7 @@ def git_push():
 
 
 
-logging.basicConfig(filename='data/error_logging.log', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename='data/error_logging.log', level=logging.DEBUG)
 
 data = "Nom_etablissement;Nom_installation;No_permis_installation;Nombre_de_civieres_fonctionnelles;" \
        "Nombre_de_civieres_occupees;Nombre_de_patients_sur_civiere_plus_de_24_heures;" \
