@@ -1,9 +1,6 @@
 import datetime
-
-import git
 from git import *
 from datetime import date
-import os
 import logging
 
 # PATH_OF_GIT_REPO = r'C:/Users/arnau/OneDrive/Documents/Universite/Automne 2021/AI/projet/GIF-4101_equipe_3_projet.git'  # make sure .git folder is properly configured
