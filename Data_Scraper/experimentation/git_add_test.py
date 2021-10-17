@@ -4,7 +4,7 @@ from datetime import date
 import logging
 
 # PATH_OF_GIT_REPO = r'C:/Users/arnau/OneDrive/Documents/Universite/Automne 2021/AI/projet/GIF-4101_equipe_3_projet.git'  # make sure .git folder is properly configured
-PATH_OF_GIT_REPO = r'C:\Users\arnau\OneDrive\Documents\Universite\Automne 2021\AI\projet\GIF-4101_equipe_3_projet\.git'
+PATH_OF_GIT_REPO = r'/home/pi/GIF-4101_equipe_3_projet/.git'
 HTTPS_REPO = 'https://github.com/ArnaudDorval/GIF-4101_equipe_3_projet.git'
 COMMIT_MESSAGE = 'test python push'
 logging.basicConfig(filename='test.log', level=logging.DEBUG)

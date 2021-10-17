@@ -68,6 +68,7 @@ while (1):
         logging.info(str(datetime.datetime.now()))
         logging.exception('')
         time.sleep(60 * 15)
+        continue()
 
 
 
