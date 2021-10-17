@@ -20,7 +20,8 @@ class Temperature:
     def fetch(self):
         fp = urllib.request.urlopen(url)
         html = fp.read()
-        soup = BeautifulSoup(html)
+        #soup = BeautifulSoup(html, features="lxml")
+        soup = BeautifulSoup(html, features="html.parser")
 
         html_body = soup.find("body").get_text().split("\n")
         now = datetime.datetime.now()

@@ -3,6 +3,9 @@ from hospital_fetch import *
 import time
 from datetime import date
 import os
+import logging
+
+logging.basicConfig(filename='data/error_logging.log', encoding='utf-8', level=logging.DEBUG)
 
 data = "Nom_etablissement;Nom_installation;No_permis_installation;Nombre_de_civieres_fonctionnelles;" \
        "Nombre_de_civieres_occupees;Nombre_de_patients_sur_civiere_plus_de_24_heures;" \
@@ -15,27 +18,40 @@ file_name = 'data/' + str(date.today()) + "-data.csv"
 temperature_obj = Temperature()
 while (1):
 
-    donnees_quebec_list = fetch_Donnees_Quebec_Data_Frame()
-    buf_name = 'data/' + str(date.today()) + "-data.csv"
+    try:
 
-    if(not os.path.isfile(buf_name)):
-        f = open(buf_name, "x")
-        f.write(data)
-        f.close()
-        file_name = buf_name
+        temperature_obj.fetch() #il y a un bug dans la fct donc je le fetch  chaque fois
+        #comme ca si ca bug sur un temperature bah il tombe en exception pis ca update
+        # pas la date de prev update et le programme continu a rouler
 
-    if(donnees_quebec_list):
-        temperature_obj.fetch()
-        temp_list = []
-        for i in donnees_quebec_list:
-            temp_list.append(i + temperature_obj.format_csv() + "\n")
+        donnees_quebec_list = fetch_Donnees_Quebec_Data_Frame()
+        buf_name = 'data/' + str(date.today()) + "-data.csv"
 
-        f = open(file_name, "a")
-        for t in temp_list:
-            f.write(t)
-            print(t)
-        f.close()
+        if(not os.path.isfile(buf_name)):
+            f = open(buf_name, "x")
+            f.write(data)
+            f.close()
+            file_name = buf_name
 
-    print(str(datetime.datetime.now()))
-    time.sleep(60*15)
+        if(donnees_quebec_list):
+            temp_list = []
+            for i in donnees_quebec_list:
+                temp_list.append(i + temperature_obj.format_csv() + "\n")
+
+            f = open(file_name, "a")
+            for t in temp_list:
+                f.write(t)
+                print(t)
+            f.close()
+
+        buff_heure = str(datetime.datetime.now())
+        print(buff_heure)
+        logging.debug(buff_heure)
+        time.sleep(60*15) # sleep 15min
+    except Exception:
+        logging.info(str(datetime.datetime.now()))
+        logging.exception('')
+        time.sleep(60 * 15)
+
+
 
