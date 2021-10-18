@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import datetime
 import re
 
-url = "https://meteo.gc.ca/past_conditions/index_f.html?station=yqb"
+url = "https://weather.gc.ca/past_conditions/index_e.html?station=yqb"
 
 
 class Temperature:
@@ -25,6 +25,7 @@ class Temperature:
 
         html_body = soup.find("body").get_text().split("\n")
         now = datetime.datetime.now()
+        w = str(now.day) + " " + now.strftime("%B") + " " + str(now.year)
         now_str = " " + str(now.hour) + ":00 "
 
         hourly_data = []
@@ -35,20 +36,20 @@ class Temperature:
                 temp_data.append(i)
 
         for r in temp_data:
-            if str(r) == now_str:
-                for j in range(16):
+            if str(r) == w :
+                for j in range(17):
                     hourly_data.append(temp_data[counter + j])
                 break
             counter += 1
 
-        self.heure = hourly_data[0]
-        self.temperature_value = re.sub(r'[()]', '', str(hourly_data[3]).replace(u'\xa0', u' ').strip(" "))
+        self.heure = hourly_data[1]
+        self.temperature_value = re.sub(r'[()]', '', str(hourly_data[4]).replace(u'\xa0', u' ').strip(" "))
         self.temperature_value.replace(",", ".")
         self.temperature_value.strip()
-        self.climat = hourly_data[1]
-        self.vent = hourly_data[8]
+        self.climat = hourly_data[2]
+        self.vent = hourly_data[9]
         self.humidex = "NA"
-        self.humidite_relative = hourly_data[10]
+        self.humidite_relative = hourly_data[11]
 
 
         return True
