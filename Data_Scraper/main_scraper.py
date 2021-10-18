@@ -44,7 +44,7 @@ while (1):
         buf_name = 'data/' + str(date.today()) + "-data.csv"
 
         if(not os.path.isfile(buf_name)):
-            #git_push()
+            git_push()
             f = open(buf_name, "x")
             f.write(data)
             f.close()
