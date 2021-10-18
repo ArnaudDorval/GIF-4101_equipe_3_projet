@@ -1,6 +1,7 @@
+from temperature_fetch import *
 from hospital_fetch import *
 import time
-from datetime import datetime, date
+from datetime import datetime
 import os
 import logging
 from git import Repo
@@ -28,15 +29,22 @@ data = "Nom_etablissement;Nom_installation;No_permis_installation;Nombre_de_civi
        "temperature;climat;vent;humidex;humidite_relative\n"
 
 dataSet = [data]
-file_name = 'data/' + str(date.today()) + "-data-hopital.csv"
+file_name = 'data/' + str(date.today()) + "-data.csv"
+
+temperature_obj = Temperature()
 while (1):
 
     try:
+
+        temperature_obj.fetch() #il y a un bug dans la fct donc je le fetch  chaque fois
+        #comme ca si ca bug sur un temperature bah il tombe en exception pis ca update
+        # pas la date de prev update et le programme continu a rouler
+
         donnees_quebec_list = fetch_Donnees_Quebec_Data_Frame()
-        buf_name = 'data/' + str(date.today()) + "-data-hopital.csv"
+        buf_name = 'data/' + str(date.today()) + "-data.csv"
 
         if(not os.path.isfile(buf_name)):
-            #git_push()
+            git_push()
             f = open(buf_name, "x")
             f.write(data)
             f.close()
@@ -45,7 +53,7 @@ while (1):
         if(donnees_quebec_list):
             temp_list = []
             for i in donnees_quebec_list:
-                temp_list.append(i + "\n")
+                temp_list.append(i + temperature_obj.format_csv() + "\n")
 
             f = open(file_name, "a")
             for t in temp_list:
@@ -53,12 +61,12 @@ while (1):
                 print(t)
             f.close()
 
-        buff_heure = str(datetime.now())
+        buff_heure = str(datetime.datetime.now())
         print(buff_heure)
         logging.debug(buff_heure)
         time.sleep(60*15) # sleep 15min
     except Exception:
-        logging.info(str(datetime.now()))
+        logging.info(str(datetime.datetime.now()))
         logging.exception('')
         time.sleep(60 * 15)
         continue
