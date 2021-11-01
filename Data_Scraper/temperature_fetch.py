@@ -45,21 +45,19 @@ class Temperature:
                 break
             counter += 1
 
-#        for r in temp_data:
- #           if str(r) == w:
-  #              for j in range(17):
-   #                 hourly_data.append(temp_data[counter + j])
-    #            break
-     #       counter += 1
+        strip_data = []
+        for g in hourly_data:
+            if not g.isspace():
+                strip_data.append(g)
 
-        self.heure = hourly_data[1]
-        self.temperature_value = re.sub(r'[()]', '', str(hourly_data[4]).replace(u'\xa0', u' ').strip(" "))
+        self.heure = strip_data[1]
+        self.temperature_value = re.sub(r'[()]', '', str(strip_data[4]).replace(u'\xa0', u' ').strip(" "))
         self.temperature_value.replace(",", ".")
         self.temperature_value.strip()
-        self.climat = hourly_data[2]
-        self.vent = hourly_data[9]
+        self.climat = strip_data[2]
+        self.vent = strip_data[7]
         self.humidex = "NA"
-        self.humidite_relative = hourly_data[11]
+        self.humidite_relative = strip_data[9]
 
         t = self.format_csv()
         print(t)
