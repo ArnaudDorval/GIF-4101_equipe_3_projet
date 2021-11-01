@@ -36,11 +36,21 @@ class Temperature:
                 temp_data.append(i)
 
         for r in temp_data:
-            if str(r) == w :
+            first_set = set(r)
+            second_set = set(w)
+            difference = first_set.symmetric_difference(second_set)
+            if len(difference) == 0:
                 for j in range(17):
                     hourly_data.append(temp_data[counter + j])
                 break
             counter += 1
+
+#        for r in temp_data:
+ #           if str(r) == w:
+  #              for j in range(17):
+   #                 hourly_data.append(temp_data[counter + j])
+    #            break
+     #       counter += 1
 
         self.heure = hourly_data[1]
         self.temperature_value = re.sub(r'[()]', '', str(hourly_data[4]).replace(u'\xa0', u' ').strip(" "))
@@ -51,7 +61,8 @@ class Temperature:
         self.humidex = "NA"
         self.humidite_relative = hourly_data[11]
 
-
+        t = self.format_csv()
+        print(t)
         return True
 
     def format_csv(self):
