@@ -7,7 +7,7 @@ file_name = 'data/' + str(date.today()) + "-data"
 
 #ouverture du fichier pour traitement
 #data = pd.read_csv(file_name + ".csv", sep=";")
-data = pd.read_csv("data/2021-10-14-data.csv", sep=";")
+data = pd.read_csv("data/2021-11-01-data.csv", sep=";")
 data = data[["Nom_etablissement", "Nom_installation", "No_permis_installation", "Nombre_de_civieres_fonctionnelles",
                "Nombre_de_civieres_occupees", "Nombre_de_patients_sur_civiere_plus_de_24_heures",
                "Nombre_de_patients_sur_civiere_plus_de_48_heures", "Heure_de_l'extraction_(image)", "Mise_a_jour",
@@ -44,9 +44,13 @@ plt.scatter(hopital_cardiologie[x_data], hopital_cardiologie[y_data])
 plt.xlabel(x_data)
 plt.ylabel(y_data)
 plt.title('Raw Data')
-#plt.legend(("Le Centre hospitalier de l'Universit Laval", "Hpital Saint-Franois-d'Assise",
-                # "L'Htel-Dieu de Qubec", "Hpital de l'Enfant-Jsus", "Hpital du Saint-Sacrement",
-                # "Institut universitaire de cardiologie et de pneumologie de Qubec"), loc='best')
+plt.legend(("Universit Laval", "St-Franois",
+                 "L'Htel-Dieu", "Enfant-Jsus", "St-Sacrement",
+                 "IUCPQ"), loc='upper center',
+                    bbox_to_anchor=(0.5, -0.05),
+                    fancybox=True, shadow=True, ncol=6)
+
+
 plt.grid(True)
 plt.show()
 print("ok")
