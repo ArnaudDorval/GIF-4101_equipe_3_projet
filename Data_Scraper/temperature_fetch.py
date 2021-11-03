@@ -55,9 +55,12 @@ class Temperature:
         self.temperature_value.replace(",", ".")
         self.temperature_value.strip()
         self.climat = strip_data[2]
+
+
         self.vent = strip_data[7]
         self.humidex = "NA"
-        self.humidite_relative = strip_data[9]
+        self.humidite_relative = strip_data[11]
+
 
         t = self.format_csv()
         print(t)
