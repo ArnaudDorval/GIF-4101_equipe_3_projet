@@ -47,12 +47,12 @@ CHU;L'Htel-Dieu de Qubec;51217586;15;13;2;0;07:00:00;2021-10-19T7:28; 07:00 ;5.3
 CHU;Hpital de l'Enfant-Jsus;51233914;48;67;17;3;07:00:00;2021-10-19T7:28; 07:00 ;5.3;Mostly Cloudy;W 14;NA;81
 CHU;Hpital du Saint-Sacrement;51217529;22;24;9;4;07:00:00;2021-10-19T7:28; 07:00 ;5.3;Mostly Cloudy;W 14;NA;81
 Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;23;0;0;07:00:00;2021-10-19T7:28; 07:00 ;5.3;Mostly Cloudy;W 14;NA;81
-CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;39;5;1;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;                                            ;NA;WSW 20
-CHU;Hpital Saint-Franois-d'Assise;51217602;34;36;8;0;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;                                            ;NA;WSW 20
-CHU;L'Htel-Dieu de Qubec;51217586;15;12;2;0;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;                                            ;NA;WSW 20
-CHU;Hpital de l'Enfant-Jsus;51233914;48;67;17;3;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;                                            ;NA;WSW 20
-CHU;Hpital du Saint-Sacrement;51217529;22;23;10;4;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;                                            ;NA;WSW 20
-Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;24;0;0;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;                                            ;NA;WSW 20
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;39;5;1;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;WSW 20;NA;80
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;36;8;0;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;WSW 20;NA;80
+CHU;L'Htel-Dieu de Qubec;51217586;15;12;2;0;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;WSW 20;NA;80
+CHU;Hpital de l'Enfant-Jsus;51233914;48;67;17;3;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;WSW 20;NA;80
+CHU;Hpital du Saint-Sacrement;51217529;22;23;10;4;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;WSW 20;NA;80
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;24;0;0;08:00:00;2021-10-19T8:28; 08:00 ;5.3;Mostly Cloudy;WSW 20;NA;80
 CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;41;6;1;09:00:00;2021-10-19T9:28; 09:00 ;5.7;Mostly Cloudy;W 24;NA;79
 CHU;Hpital Saint-Franois-d'Assise;51217602;34;38;9;1;09:00:00;2021-10-19T9:28; 09:00 ;5.7;Mostly Cloudy;W 24;NA;79
 CHU;L'Htel-Dieu de Qubec;51217586;15;13;2;0;09:00:00;2021-10-19T9:28; 09:00 ;5.7;Mostly Cloudy;W 24;NA;79

@@ -1,10 +1,10 @@
 Nom_etablissement;Nom_installation;No_permis_installation;Nombre_de_civieres_fonctionnelles;Nombre_de_civieres_occupees;Nombre_de_patients_sur_civiere_plus_de_24_heures;Nombre_de_patients_sur_civiere_plus_de_48_heures;Heure_de_l'extraction_(image);Mise_a_jour;heure_meteo;temperature;climat;vent;humidex;humidite_relative
-CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;38;2;1;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;                                            ;NA;W 6
-CHU;Hpital Saint-Franois-d'Assise;51217602;34;38;11;2;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;                                            ;NA;W 6
-CHU;L'Htel-Dieu de Qubec;51217586;15;11;0;0;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;                                            ;NA;W 6
-CHU;Hpital de l'Enfant-Jsus;51233914;48;48;7;1;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;                                            ;NA;W 6
-CHU;Hpital du Saint-Sacrement;51217529;22;24;6;2;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;                                            ;NA;W 6
-Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;12;0;0;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;                                            ;NA;W 6
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;38;2;1;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;W 6;NA;NA
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;38;11;2;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;W 6;NA;NA
+CHU;L'Htel-Dieu de Qubec;51217586;15;11;0;0;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;W 6;NA;NA
+CHU;Hpital de l'Enfant-Jsus;51233914;48;48;7;1;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;W 6;NA;NA
+CHU;Hpital du Saint-Sacrement;51217529;22;24;6;2;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;W 6;NA;NA
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;12;0;0;08:00:00;2021-10-23T8:28; 08:00 ;1.5;Partly Cloudy;W 6;NA;NA
 CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;35;2;1;09:00:00;2021-10-23T9:28; 09:00 ;2.7;Mostly Cloudy;SW 8;NA;92
 CHU;Hpital Saint-Franois-d'Assise;51217602;34;40;12;2;09:00:00;2021-10-23T9:28; 09:00 ;2.7;Mostly Cloudy;SW 8;NA;92
 CHU;L'Htel-Dieu de Qubec;51217586;15;11;0;0;09:00:00;2021-10-23T9:28; 09:00 ;2.7;Mostly Cloudy;SW 8;NA;92
