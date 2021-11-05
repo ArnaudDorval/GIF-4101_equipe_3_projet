@@ -5024,3 +5024,495 @@ DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc
 DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12653
 DEBUG:git.cmd:Popen(['git', 'pull', '-v', 'origin'], cwd=/home/pi/GIF-4101_equipe_3_projet, universal_newlines=True, shell=None, istream=None)
 DEBUG:git.cmd:Popen(['git', 'add', '--all'], cwd=/home/pi/GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/pi/GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch'], cwd=/home/pi/GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'push', '--porcelain', 'origin'], cwd=/home/pi/GIF-4101_equipe_3_projet, universal_newlines=True, shell=None, istream=None)
+DEBUG:root:2021-11-04 00:28:31.386533
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12653
+DEBUG:root:2021-11-04 00:43:32.420650
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12653
+DEBUG:root:2021-11-04 00:58:33.659517
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12653
+DEBUG:root:2021-11-04 01:13:34.878516
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12653
+DEBUG:root:2021-11-04 01:28:35.993786
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12653
+DEBUG:root:2021-11-04 01:43:37.217793
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12653
+DEBUG:root:2021-11-04 01:58:38.609297
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12653
+DEBUG:root:2021-11-04 02:13:39.897407
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12654
+DEBUG:root:2021-11-04 02:28:41.181016
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12654
+DEBUG:root:2021-11-04 02:43:42.375518
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12654
+DEBUG:root:2021-11-04 02:58:43.605510
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12654
+DEBUG:root:2021-11-04 03:13:44.876531
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12654
+DEBUG:root:2021-11-04 03:28:46.015014
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12654
+DEBUG:root:2021-11-04 03:43:47.135520
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12654
+DEBUG:root:2021-11-04 03:58:48.334514
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12654
+DEBUG:root:2021-11-04 04:13:49.806730
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12656
+DEBUG:root:2021-11-04 04:28:50.980044
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12656
+DEBUG:root:2021-11-04 04:43:52.177535
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12656
+DEBUG:root:2021-11-04 04:58:53.409464
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12656
+DEBUG:root:2021-11-04 05:13:54.537671
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12657
+DEBUG:root:2021-11-04 05:28:56.868710
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12657
+DEBUG:root:2021-11-04 05:43:58.761469
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12657
+DEBUG:root:2021-11-04 05:59:00.585374
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12657
+DEBUG:root:2021-11-04 06:14:02.515921
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12657
+DEBUG:root:2021-11-04 06:29:05.088558
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12657
+DEBUG:root:2021-11-04 06:44:07.389782
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12657
+DEBUG:root:2021-11-04 06:59:09.809042
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12657
+DEBUG:root:2021-11-04 07:14:10.995018
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12774
+DEBUG:root:2021-11-04 07:29:12.574093
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12774
+DEBUG:root:2021-11-04 07:44:13.698533
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12774
+DEBUG:root:2021-11-04 07:59:14.858148
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12774
+DEBUG:root:2021-11-04 08:14:16.027405
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12658
+DEBUG:root:2021-11-04 08:29:17.132763
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12658
+DEBUG:root:2021-11-04 08:44:18.374701
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12658
+DEBUG:root:2021-11-04 08:59:19.785369
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12658
+DEBUG:root:2021-11-04 09:14:21.054134
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12660
+DEBUG:root:2021-11-04 09:29:22.230168
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12660
+DEBUG:root:2021-11-04 09:44:23.516575
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12660
+DEBUG:root:2021-11-04 09:59:27.046143
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12660
+DEBUG:root:2021-11-04 10:14:28.281498
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12776
+DEBUG:root:2021-11-04 10:29:29.535210
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12776
+DEBUG:root:2021-11-04 10:44:30.921375
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12776
+DEBUG:root:2021-11-04 10:59:32.161125
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12776
+DEBUG:root:2021-11-04 11:14:33.726208
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12779
+DEBUG:root:2021-11-04 11:29:34.800215
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12779
+DEBUG:root:2021-11-04 11:44:36.017145
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12779
+DEBUG:root:2021-11-04 11:59:37.208561
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12779
+DEBUG:root:2021-11-04 12:14:38.267477
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12778
+DEBUG:root:2021-11-04 12:29:39.447553
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12778
+DEBUG:root:2021-11-04 12:44:40.612383
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12778
+DEBUG:root:2021-11-04 12:59:41.869268
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12778
+DEBUG:root:2021-11-04 13:14:43.127464
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12780
+DEBUG:root:2021-11-04 13:29:44.606401
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12780
+DEBUG:root:2021-11-04 13:44:45.724277
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12780
+DEBUG:root:2021-11-04 13:59:46.792133
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12780
+DEBUG:root:2021-11-04 14:14:47.973168
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12778
+DEBUG:root:2021-11-04 14:29:49.149423
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12778
+DEBUG:root:2021-11-04 14:44:50.353684
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12778
+DEBUG:root:2021-11-04 14:59:51.556903
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12778
+DEBUG:root:2021-11-04 15:14:52.725991
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12891
+DEBUG:root:2021-11-04 15:29:54.052014
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12891
+DEBUG:root:2021-11-04 15:44:55.367648
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12891
+DEBUG:root:2021-11-04 15:59:56.515294
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12891
+DEBUG:root:2021-11-04 16:14:57.653456
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12774
+DEBUG:root:2021-11-04 16:29:58.790671
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12774
+DEBUG:root:2021-11-04 16:44:59.925787
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12774
+DEBUG:root:2021-11-04 17:00:01.078355
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12774
+DEBUG:root:2021-11-04 17:15:02.267215
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12775
+DEBUG:root:2021-11-04 17:30:03.333125
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12775
+DEBUG:root:2021-11-04 17:45:04.423238
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12775
+DEBUG:root:2021-11-04 18:00:05.794991
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12775
+DEBUG:root:2021-11-04 18:15:07.274750
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12769
+DEBUG:root:2021-11-04 18:30:10.047906
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12769
+DEBUG:root:2021-11-04 18:45:11.341994
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12769
+DEBUG:root:2021-11-04 19:00:12.803502
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12769
+DEBUG:root:2021-11-04 19:15:14.030664
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12770
+DEBUG:root:2021-11-04 19:30:15.262901
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12770
+DEBUG:root:2021-11-04 19:45:16.361711
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12770
+DEBUG:root:2021-11-04 20:00:17.609513
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12770
+DEBUG:root:2021-11-04 20:15:19.380159
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12769
+DEBUG:root:2021-11-04 20:30:20.636063
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12769
+DEBUG:root:2021-11-04 20:45:22.076096
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12769
+DEBUG:root:2021-11-04 21:00:23.719892
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12769
+DEBUG:root:2021-11-04 21:15:24.929949
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12767
+DEBUG:root:2021-11-04 21:30:26.163189
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12767
+DEBUG:root:2021-11-04 21:45:27.414037
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12767
+DEBUG:root:2021-11-04 22:00:28.695248
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12767
+DEBUG:root:2021-11-04 22:15:29.913547
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12762
+DEBUG:root:2021-11-04 22:30:31.172442
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12762
+DEBUG:root:2021-11-04 22:45:32.554693
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12762
+DEBUG:root:2021-11-04 23:00:33.664264
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12762
+DEBUG:root:2021-11-04 23:15:34.784515
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12764
+DEBUG:root:2021-11-04 23:30:36.058607
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12764
+DEBUG:root:2021-11-04 23:45:37.258052
+INFO:root:2021-11-05 00:00:38.173934
+ERROR:root:
+Traceback (most recent call last):
+  File "/home/pi/GIF-4101_equipe_3_projet/Data_Scraper/main_scraper.py", line 39, in <module>
+    temperature_obj.fetch() #il y a un bug dans la fct donc je le fetch  chaque fois
+  File "/home/pi/GIF-4101_equipe_3_projet/Data_Scraper/temperature_fetch.py", line 53, in fetch
+    self.heure = strip_data[1]
+IndexError: list index out of range
+INFO:root:2021-11-05 00:15:38.957150
+ERROR:root:
+Traceback (most recent call last):
+  File "/home/pi/GIF-4101_equipe_3_projet/Data_Scraper/main_scraper.py", line 39, in <module>
+    temperature_obj.fetch() #il y a un bug dans la fct donc je le fetch  chaque fois
+  File "/home/pi/GIF-4101_equipe_3_projet/Data_Scraper/temperature_fetch.py", line 53, in fetch
+    self.heure = strip_data[1]
+IndexError: list index out of range
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.msss.gouv.qc.ca:80
+DEBUG:urllib3.connectionpool:http://www.msss.gouv.qc.ca:80 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msss.gouv.qc.ca:443
+DEBUG:urllib3.connectionpool:https://www.msss.gouv.qc.ca:443 "GET /professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv HTTP/1.1" 200 12648
+DEBUG:git.cmd:Popen(['git', 'pull', '-v', 'origin'], cwd=/home/pi/GIF-4101_equipe_3_projet, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/pi/GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=<valid stream>)
+DEBUG:git.cmd:Popen(['git', 'add', '--all'], cwd=/home/pi/GIF-4101_equipe_3_projet, universal_newlines=False, shell=None, istream=None)
