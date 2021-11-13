@@ -27,6 +27,8 @@ def main():
     # ajoute une colonne qui associe la valeur normalise a la classe la plus proche
     new_df = _db.convert_civ_norm_closest_class(new_df)
 
+    #rajoute une colonne WEEKDAY_VALUE qui represente le jour de la semaine a partir de [0->lundi,6->dimanche]
+    new_df = _db.add_day_of_the_week(new_df)
     print("ok")
 
 

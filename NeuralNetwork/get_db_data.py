@@ -84,6 +84,15 @@ class get_db_data:
         p_df['CIV_NORMALISE_CLASS'] = tmp_list
         return p_df
 
+    def add_day_of_the_week(self, p_df):
+        temp_date = []
+        for ind in p_df.index:
+            val_time = p_df['LOCAL_TIME'][ind]
+            temp_date.append(val_time.weekday())
+
+        p_df['WEEKDAY_VALUE'] = temp_date
+        return p_df
+
     def plot_tempurature(self, p_df):
         p_df.plot(kind='scatter', x='LOCAL_TIME', y="TEMP", color='red')
         plt.show()
