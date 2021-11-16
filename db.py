@@ -103,11 +103,8 @@ r1 = pd.read_sql(sql1, cnxn)
 r9 = pd.read_sql(sql9, cnxn)
 
 
-<<<<<<< HEAD
 #pd.set_option("display.max_colwidth", None) # Utile pour print des longues strings sans que pandas les truncate
-=======
 pd.set_option("display.max_colwidth", None) # Utile pour print des longues strings sans que pandas les truncate
->>>>>>> f80bf60c7397c10f5f1a6c4c6804e41503f5d4a3
 
 #print(r0)
 print(r1)
