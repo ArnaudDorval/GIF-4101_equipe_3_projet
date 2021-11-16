@@ -1,3 +1,4 @@
+import numpy
 import numpy as np
 import matplotlib.pyplot as plt
 from data import Data, dict_achalandage
@@ -7,17 +8,27 @@ from sklearn.model_selection import train_test_split
 
 def non_parametric_models(data):
     X, y = data()
-    n = 43
+    n = range(1, 100)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
     metrics = ["euclidean", "manhattan", "chebyshev", "minkowski"]
+    tmp_score = 0
+    new_score = 0
+    best_k = 0
+    best_clf = KNeighborsClassifier(1, metric=metrics[0])
 
     for i in range(len(metrics)):
-        clf = KNeighborsClassifier(n, metric=metrics[i])
-        clf.fit(X_train, y_train)
+        tmp_score = 0
+        for j in n:
+            clf = KNeighborsClassifier(j, metric=metrics[i])
+            clf.fit(X_train, y_train)
+            new_score = clf.score(X_test, y_test)
+            if tmp_score < new_score:
+                tmp_score = new_score
+                best_clf = clf
+                best_k = j
 
         print("KNearestNeightbors : K = {0}, Score = {1}, metric = {2}, Comment = {3}"
-              .format(n, clf.score(X_test, y_test), metrics[i], "Data are too clustered due to the features having "
-                                                                "small ranges to get any significant information"))
+              .format(best_k, best_clf.score(X_test, y_test), metrics[i], ""))
 
     """ --- 3d representation of the data ---
     fig = plt.figure()
@@ -28,7 +39,7 @@ def non_parametric_models(data):
     ax.legend(*scatter.legend_elements(fmt="Classe {x:g}"))
     """
 
-    """ --- multiple plots of 2d classifiers ---
+    """ --- multiple plots of 2d classifiers --- 
     fig, sub_figs = plt.subplots(2, 2, tight_layout=True)
     colors = numpy.array([x for x in "bgrcmyk"])
     pairs = [(0, 1), (0, 2), (1, 2)]
@@ -52,19 +63,19 @@ def non_parametric_models(data):
                             label=dict_achalandage[t], s=10)
         sub_fig.set_xlabel(data.feature_names[f1])
         sub_fig.set_ylabel(data.feature_names[f2])
-        sub_fig.legend()
-    """
+        #sub_fig.legend()
 
-    """ ---  Possibility to rename the axis for better understanding of numerical values ---
+
+    ---  Possibility to rename the axis for better understanding of numerical values ---
     ax.xaxis.set_ticks(numpy.arange(min(X[:, 0]), max(X[:, 0]) + 1, 1.0))
     labels = [item.get_text() for item in ax.get_xticklabels()]
     
     # Adjusting the margins to fit the text
     plt.gcf().subplots_adjust(left=0.2/plt.gcf().get_size_inches()[0], right=1.- 0.2/plt.gcf().get_size_inches()[0])
+
+    #for i in range(len(numpy.unique(X[:, 0]))):
+        #labels[i] = data.explicit_weather[i]
     
-    for i in range(len(numpy.unique(X[:, 0]))):
-        labels[i] = data.get_weather(i)
+    #ax.set_xticklabels(labels)
     
-    ax.set_xticklabels(labels)
-    """
-    # plt.show()
+    plt.show()"""
