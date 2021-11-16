@@ -1,0 +1,7 @@
+Nom_etablissement;Nom_installation;No_permis_installation;Nombre_de_civieres_fonctionnelles;Nombre_de_civieres_occupees;Nombre_de_patients_sur_civiere_plus_de_24_heures;Nombre_de_patients_sur_civiere_plus_de_48_heures;Heure_de_l'extraction_(image);Mise_a_jour;heure_meteo;temperature;climat;vent;humidex;humidite_relative
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;35;7;1;09:00:00;2021-10-18T9:28;
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;37;11;3;09:00:00;2021-10-18T9:28;
+CHU;L'Htel-Dieu de Qubec;51217586;15;17;2;0;09:00:00;2021-10-18T9:28;
+CHU;Hpital de l'Enfant-Jsus;51233914;48;61;25;11;09:00:00;2021-10-18T9:28;
+CHU;Hpital du Saint-Sacrement;51217529;22;24;9;7;09:00:00;2021-10-18T9:28;
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;18;1;0;09:00:00;2021-10-18T9:28;
