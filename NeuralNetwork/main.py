@@ -20,7 +20,7 @@ def test_all_combination_knn():
 def main():
 
     data = Data()
-    #test_all_combination_knn()
+    test_all_combination_knn()
 
 
     #linear_models(data)

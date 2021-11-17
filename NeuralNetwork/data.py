@@ -26,46 +26,40 @@ class Data:
         df = pd.read_sql("select * from MAIN", cnxn)
         self.size = len(df.index)
 
+        temp = df[['LOCAL_TIME', 'NB_CIV_OCC', 'NOM_HOSPITAL']].groupby("NOM_HOSPITAL", as_index=False)\
+            .apply(
+            lambda x: (x.NB_CIV_OCC - x.NB_CIV_OCC.shift())
+                .where((x.LOCAL_TIME - x.LOCAL_TIME.shift()).dt.total_seconds()/60 < 120))\
+            .reset_index(level=0).sort_index()['NB_CIV_OCC']
+
         # X has 3 dimension : weather, day of the week, hour of the day
         # y correspond to ratio of used stretchers rounded to _step bounded between 0 and _max
-        self.X = numpy.zeros((self.size, len(p_list)))
-        self.y = numpy.zeros(self.size)
+        self.X = numpy.zeros((temp.dropna().size, len(p_list)))
+        self.y = numpy.zeros(temp.dropna().size)
         self.feature_names = numpy.array(p_list)
+        self.y, self.explicit_y = pd.factorize(temp.mask(temp.isnull(), pd.NA).dropna())
 
         for index, val in enumerate(p_list):
             temp_data = []
 
             if val == 'HEURE':
                 # Third column correspond to the hour of the day (0-23)
-                temp_data = df['LOCAL_TIME'].dt.hour
+                temp_data = df['LOCAL_TIME'].dt.hour.mask(temp.isnull(), pd.NA).dropna().apply(lambda x: x - 1 % 24)
             elif val == "JOUR":
                 # Second column correspond to the day of the week (0-6)
-                temp_data = df['LOCAL_TIME'].dt.dayofweek
+                temp_data = df['LOCAL_TIME'].dt.dayofweek.mask(temp.isnull(), pd.NA).dropna()
             elif val == 'WEATHER_DESCRIPTION':
                 # First column correspond to the normalized weather data, we're also saving the types of weather
                 # identifying the numerical value
-                temp_data, self.explicite_weather_desc = pd.factorize(df['WEATHER_DESCRIPTION'])
+                temp_data, self.explicite_weather_desc = pd.factorize(df['WEATHER_DESCRIPTION'].mask(temp.isnull(), pd.NA).dropna())
             elif val == 'TEMP':
-                temp_data, self.explicit_temp = pd.factorize(df['TEMP'])
+                temp_data, self.explicit_temp = pd.factorize(df['TEMP'].mask(temp.isnull(), pd.NA).dropna())
             elif val == 'HUMIDITY':
-                temp_data, self.explicit_humidity = pd.factorize(df['HUMIDITY'])
+                temp_data, self.explicit_humidity = pd.factorize(df['HUMIDITY'].mask(temp.isnull(), pd.NA).dropna())
             elif val == 'WEATHER':
-                temp_data, self.explicite_weather = pd.factorize(df['WEATHER'])
+                temp_data, self.explicite_weather = pd.factorize(df['WEATHER'].mask(temp.isnull(), pd.NA).dropna())
 
             self.X[:, index] = temp_data
-
-
-            for j in liste_hopital:
-                hopital = df[df['NOM_HOSPITAL'] == j]
-                tmp_y = hopital['NB_CIV_OCC']
-                new_y = []
-                old_value = 0
-                for b in tmp_y:
-                    if old_value > 0:
-                       new_y.append(tmp_y.index(b) - old_value)
-
-                    old_value = b
-                    print("ok")
 
     def __call__(self):
         return self.X, self.y
