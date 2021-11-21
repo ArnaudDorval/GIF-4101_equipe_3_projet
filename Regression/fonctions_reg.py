@@ -4,6 +4,8 @@ from sklearn.model_selection import KFold
 from sklearn import datasets
 from matplotlib import pyplot
 from math import sqrt, ceil
+from load_dataset import Data
+
 
 
 def appliquer_regression(data, target, k, fit_intercept=True, shuffle=True):
@@ -38,19 +40,21 @@ def meilleur_modele(data, target):
 
 
 def main():
-    diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
-    nb_vars = diabetes_X.shape[1]
-    carre = int(sqrt(nb_vars))
-    long = ceil(nb_vars/carre)
-    fig, subfigs = pyplot.subplots(carre, long, tight_layout=True)
-    for i, subfig in zip(range(nb_vars), subfigs.reshape(-1)):
-        scatter = subfig.scatter(diabetes_X[:, i], diabetes_y)
+    x,y = Data().get_x_y()
+    appliquer_regression(x.values, y.values, 2)
+    #diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
+    #nb_vars = diabetes_X.shape[1]
+    #carre = int(sqrt(nb_vars))
+    #long = ceil(nb_vars/carre)
+    #fig, subfigs = pyplot.subplots(carre, long, tight_layout=True)
+    #for i, subfig in zip(range(nb_vars), subfigs.reshape(-1)):
+        #scatter = subfig.scatter(diabetes_X[:, i], diabetes_y)
 
-    pyplot.show()
+    #pyplot.show()
 
 
-    r = meilleur_modele(diabetes_X, diabetes_y)
-    print(r)
+    #r = meilleur_modele(diabetes_X, diabetes_y)
+    #print(r)
     return 0
 
 if __name__ == '__main__':
