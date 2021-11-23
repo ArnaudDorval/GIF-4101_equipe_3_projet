@@ -22,10 +22,12 @@ class Data:
                                "NB_PATIENT_CIV_48_H, TEMP, HUMIDITY, PRESSURE, VISIBILITY, WIND_SPEED,WEATHER, WEATHER_DESCRIPTION FROM MAIN", cnxn, columns=['LOCAL_TIME', 'NOM_HOSPITAL','NB_PATIENT_CIV_24_H',
                                              'NB_PATIENT_CIV_48_H', 'TEMP', 'HUMIDITY', 'PRESSURE', 'VISIBILITY',
                                              'WIND_SPEED', 'WEATHER', 'WEATHER_DESCRIPTION'])
-        #Conversion des données discrètes
+        #Conversion des donnees categorielles
         conv_weather_desc, self.dict_weather_desc = pd.factorize(x['WEATHER_DESCRIPTION'])
         conv_nom_hop, self.dict_nom_hop = pd.factorize(x['NOM_HOSPITAL'])
         conv_weather, self.dict_weather = pd.factorize(x['WEATHER'])
+
+        self.vars_cat = ['WEATHER_DESCRIPTION','NOM_HOSPITAL', 'WEATHER']
 
         x['WEATHER_DESCRIPTION'] = conv_weather_desc
         x['NOM_HOSPITAL'] = conv_nom_hop
@@ -50,7 +52,17 @@ class Data:
 if __name__ == '__main__':
     data = Data()
     X,Y=data.get_x_y()
-    print(X,Y)
+    jd = X.iloc[:, 1:9]
+    v = data.vars_cat
+    v2 = []
+    for v in v:
+        if (v in jd.columns):
+            v2.append(v)
+    if len(v2) == 0:
+        v2 = None
+
+
+#    print(d)
     #print(X.values[0])
     #print(X.values[0].size)
     #print(X.columns)
