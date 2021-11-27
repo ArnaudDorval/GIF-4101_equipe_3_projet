@@ -37,7 +37,7 @@ def appliquer_regression(data, target, k, fit_intercept=True, shuffle=True, vars
 
 # Prend en entree un jeu de donnees Pandas,
 # Retourne une liste contenant les index des variables utilisees par le meilleur modele et l'erreur de ce modele
-def meilleur_modele(data, target, vars_categorielles=None):
+def meilleur_modele(data, target, vars_categorielles=None, excel_writer=None, sheet_name='Sheet 1'):
     X,y = data, target
     resultats = []
     nb_vars = data.shape[1]
@@ -65,6 +65,9 @@ def meilleur_modele(data, target, vars_categorielles=None):
             resultats.append([noms_variables, err])
 
     resultats = np.array(resultats)
+    resultats_pd = pd.DataFrame(resultats)
+    if excel_writer is not None:
+        resultats_pd.to_excel(excel_writer, sheet_name=sheet_name, header=['Variables', 'Erreur'])
     meill_err_idx = np.argmin(resultats[:,1])
     return resultats[meill_err_idx,:]
 
