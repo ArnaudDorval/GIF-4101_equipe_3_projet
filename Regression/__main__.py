@@ -20,7 +20,6 @@ fig, subfigs = pyplot.subplots(nb_cols, nb_cols, tight_layout=True)
 
 label_y = y.columns[0]
 for variable, subfig in zip(vars_x, subfigs.reshape(-1)):
-    print(variable)
     label_x = variable
     subfig.scatter(x[variable], y)
     subfig.set_ylabel(label_y)
