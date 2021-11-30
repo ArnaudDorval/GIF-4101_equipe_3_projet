@@ -21,7 +21,7 @@ fig, subfigs = pyplot.subplots(nb_cols, nb_cols, tight_layout=True)
 label_y = y.columns[0]
 for variable, subfig in zip(vars_x, subfigs.reshape(-1)):
     label_x = variable
-    subfig.scatter(x[variable], y)
+    subfig.scatter(x[variable], y, s=1)
     subfig.set_ylabel(label_y)
     subfig.set_xlabel(label_x)
 
@@ -47,6 +47,6 @@ d2 = pd.DataFrame(d2, index=['model', 'err'], columns=['Donnees normalisees'])
 d2.to_excel(writer, sheet_name='Normalisees')
 
 writer.save()
-fig.set_size_inches(12, 7)
+fig.set_size_inches(25, 10)
 pyplot.savefig(fname='relations.png')
 pyplot.show()

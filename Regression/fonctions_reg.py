@@ -41,6 +41,9 @@ def meilleur_modele(data, target, vars_categorielles=None, excel_writer=None, sh
     X,y = data, target
     resultats = []
     nb_vars = data.shape[1]
+    nb_obs = data.shape[0]
+    # Si on veut creer un jeu de donnees d'entrainement contenant 80% des obs (choix arbitraire), il faut avoir k = 5
+    k = 5
 
 ### A VOIR: UTILISER ITERTOOLS COMME ARNAUD/SAM ?
     for idx_1 in range(nb_vars):
@@ -60,7 +63,7 @@ def meilleur_modele(data, target, vars_categorielles=None, excel_writer=None, sh
             if len(vars_categorielles_actuelles) == 0:
                 vars_categorielles_actuelles = None
 
-            err = appliquer_regression(data=jd, target=y, k=3, vars_categorielles=vars_categorielles_actuelles)
+            err = appliquer_regression(data=jd, target=y, k=k, vars_categorielles=vars_categorielles_actuelles)
 #            vars = [i for i in range(idx_1, idx_2+1)]
             resultats.append([noms_variables, err])
 
