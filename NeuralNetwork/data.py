@@ -17,7 +17,7 @@ liste_hopital = ["Le Centre hospitalier de l'Universit Laval", "Hpital Saint-Fra
 
 class Data:
 
-    def __init__(self, _step=0.25, _max=1.75, p_list = ['HEURE', 'TEMP']):
+    def __init__(self, _step=0.25, _max=1.75, p_list = ['HEURE', 'WEATHER'], type_y = "variation-1"):
         # Connect to the database
         cnxn = pyodbc.connect(
             'DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE='
@@ -37,7 +37,6 @@ class Data:
         self.X = numpy.zeros((temp.dropna().size, len(p_list)))
         self.y = numpy.zeros(temp.dropna().size)
         self.feature_names = numpy.array(p_list)
-        self.y, self.explicit_y = pd.factorize(temp.mask(temp.isnull(), pd.NA).dropna())
 
         for index, val in enumerate(p_list):
             temp_data = []
@@ -61,16 +60,33 @@ class Data:
 
             self.X[:, index] = temp_data
 
+        if(type_y == "variation-1"):
+            # retourne des classes pour les differente variation heure par heure
+            self.y, self.explicit_y = pd.factorize(temp.mask(temp.isnull(), pd.NA).dropna())
+            self.X = self.X[:-1, :]
+            self.explicit_y = numpy.delete(self.explicit_y, 0)
+            self.y = numpy.delete(self.y, 0)
+
+        elif(type_y == "normalised_variation"):
+            # retourne la distribution entre [0,1] de la variation heure par heure
+            n = []
+            arr = numpy.asarray(temp.mask(temp.isnull(), pd.NA).dropna())
+            for i in arr:
+                n.append((i - min(arr)) / (max(arr) - min(arr)))
+            print("ok")
+            self.y = n
+            self.explicit_y = arr
+
+        elif (type_y == "civ_occ/civ_dispo"):
+            # retourne un y avec des classe pour le taux doccupation selon le step par défaut 25%
+            norm = numpy.zeros(round(_max / _step))
+            for i in range(len(norm)):
+                norm[i] = (i + 1) * _step
+
+            # Reformatting the data to get the class index from the number of used stretchers divided by the number of
+            # available stretchers rounded to closest step
+            reformat = numpy.vectorize(lambda x: min(norm, key=lambda y: abs(x - y)))
+            self.y, self.explicit_y = pd.factorize(reformat((df['NB_CIV_OCC'] / df['NB_CIV_FONC']).array))
+
     def __call__(self):
         return self.X, self.y
-
-    def normalize_civ(self, _max, _step, df):
-        # Initializing a temp array of all the steps for the stretchers classes
-        norm = numpy.zeros(round(_max / _step))
-        for i in range(len(norm)):
-            norm[i] = (i + 1) * _step
-
-        # Reformatting the data to get the class index from the number of used stretchers divided by the number of
-        # available stretchers rounded to closest step
-        reformat = numpy.vectorize(lambda x: min(norm, key=lambda y: abs(x - y)))
-        self.y, self.explicit_y = pd.factorize(reformat((df['NB_CIV_OCC'] / df['NB_CIV_FONC']).array))
