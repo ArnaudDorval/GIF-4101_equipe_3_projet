@@ -88,5 +88,11 @@ class Data:
             reformat = numpy.vectorize(lambda x: min(norm, key=lambda y: abs(x - y)))
             self.y, self.explicit_y = pd.factorize(reformat((df['NB_CIV_OCC'] / df['NB_CIV_FONC']).array))
 
+
+
     def __call__(self):
         return self.X, self.y
+
+    def group_data(self):
+        #permet de grouper les datas ex par bloc de 6h
+        pass
