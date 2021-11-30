@@ -1,15 +1,28 @@
 import numpy
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
+
 from data import Data, dict_achalandage
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 
 
-def non_parametric_models(data):
+def non_parametric_models(data, transform = 'norm'):
     X, y = data()
     n = range(1, 100)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+
+    #normalisation/standardization
+    if (transform == 'standardization'):
+        pass
+    else:
+        norm = MinMaxScaler().fit(X_train)
+        # transform training data
+        X_train= norm.transform(X_train)
+        # transform testing dataabs
+        X_test = norm.transform(X_test)
+
     metrics = ["euclidean", "manhattan", "chebyshev", "minkowski"]
     tmp_score = 0
     new_score = 0
@@ -22,7 +35,7 @@ def non_parametric_models(data):
             clf = KNeighborsClassifier(j, metric=metrics[i])
             clf.fit(X_train, y_train)
             new_score = clf.score(X_test, y_test)
-            if tmp_score < new_score:
+            if new_score > tmp_score:
                 tmp_score = new_score
                 best_clf = clf
                 best_k = j
