@@ -20,16 +20,16 @@ class Data:
         #Construction dataframe
 #        y = pd.read_sql("SELECT round(cast (NB_CIV_OCC as float)/cast(NB_CIV_FONC as float),2) as TAUX_OCC from MAIN ", cnxn, columns = ['TAUX_OCC'])
         y = pd.read_sql("SELECT round(sum(cast (NB_CIV_OCC as float)) / sum(cast(NB_CIV_FONC as float)),3) as TAUX_OCC_MOY from MAIN group by dbo.DATE_OF(LOCAL_TIME), NOM_HOSPITAL", cnxn, columns = ['TAUX_OCC_MOY'])
-        x = pd.read_sql("SELECT"
-                               " dbo.DATE_OF(LOCAL_TIME) as LOCAL_TIME, NOM_HOSPITAL, NB_PATIENT_CIV_24_H,"
-                               "NB_PATIENT_CIV_48_H, TEMP, HUMIDITY, PRESSURE, VISIBILITY, WIND_SPEED,WEATHER, WEATHER_DESCRIPTION FROM MAIN", cnxn, columns=['LOCAL_TIME', 'NOM_HOSPITAL','NB_PATIENT_CIV_24_H',
-                                             'NB_PATIENT_CIV_48_H', 'TEMP', 'HUMIDITY', 'PRESSURE', 'VISIBILITY',
-                                             'WIND_SPEED', 'WEATHER', 'WEATHER_DESCRIPTION'])
 #        x = pd.read_sql("SELECT"
-#                               " dbo.DATE_OF(LOCAL_TIME) as LOCAL_TIME, NOM_HOSPITAL, avg(NB_PATIENT_CIV_24_H) as NB_PATIENT_CIV_24_H_AVG,"
-#                               "avg(NB_PATIENT_CIV_48_H) as NB_PATIENT_CIV_48_H_AVG, avg(TEMP) as TEMP_AVG, avg(HUMIDITY) as HUMIDITY_AVG, avg(PRESSURE) as PRESSURE_AVG, avg(VISIBILITY) as VISIBILITY_AVG, avg(WIND_SPEED) as WIND_SPEED_AVG,WEATHER, WEATHER_DESCRIPTION from MAIN group by NOM_HOSPITAL, dbo.DATE_OF(LOCAL_TIME), WEATHER, WEATHER_DESCRIPTION", cnxn, columns=['LOCAL_TIME', 'NOM_HOSPITAL','NB_PATIENT_CIV_24_H',
+#                               " dbo.DATE_OF(LOCAL_TIME) as LOCAL_TIME, NOM_HOSPITAL, NB_PATIENT_CIV_24_H,"
+#                               "NB_PATIENT_CIV_48_H, TEMP, HUMIDITY, PRESSURE, VISIBILITY, WIND_SPEED,WEATHER, WEATHER_DESCRIPTION FROM MAIN", cnxn, columns=['LOCAL_TIME', 'NOM_HOSPITAL','NB_PATIENT_CIV_24_H',
 #                                             'NB_PATIENT_CIV_48_H', 'TEMP', 'HUMIDITY', 'PRESSURE', 'VISIBILITY',
 #                                             'WIND_SPEED', 'WEATHER', 'WEATHER_DESCRIPTION'])
+        x = pd.read_sql("SELECT"
+                               " dbo.DATE_OF(LOCAL_TIME) as LOCAL_TIME, NOM_HOSPITAL, avg(NB_PATIENT_CIV_24_H) as NB_PATIENT_CIV_24_H_AVG,"
+                               "avg(NB_PATIENT_CIV_48_H) as NB_PATIENT_CIV_48_H_AVG, avg(TEMP) as TEMP_AVG, avg(HUMIDITY) as HUMIDITY_AVG, avg(PRESSURE) as PRESSURE_AVG, avg(VISIBILITY) as VISIBILITY_AVG, avg(WIND_SPEED) as WIND_SPEED_AVG,WEATHER, WEATHER_DESCRIPTION from MAIN group by NOM_HOSPITAL, dbo.DATE_OF(LOCAL_TIME), WEATHER, WEATHER_DESCRIPTION", cnxn, columns=['LOCAL_TIME', 'NOM_HOSPITAL','NB_PATIENT_CIV_24_H',
+                                             'NB_PATIENT_CIV_48_H', 'TEMP', 'HUMIDITY', 'PRESSURE', 'VISIBILITY',
+                                             'WIND_SPEED', 'WEATHER', 'WEATHER_DESCRIPTION'])
         #Conversion des donnees categorielles
         conv_weather_desc, self.dict_weather_desc = pd.factorize(x['WEATHER_DESCRIPTION'])
         conv_nom_hop, self.dict_nom_hop = pd.factorize(x['NOM_HOSPITAL'])

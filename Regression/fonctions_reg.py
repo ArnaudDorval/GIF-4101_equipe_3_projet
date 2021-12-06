@@ -14,7 +14,7 @@ def appliquer_regression(data, target, k, fit_intercept=True, shuffle=True, vars
     # Copie de data et target pour pouvoir les manipuler librement
     X, y = data, target
 #    mod = LinearRegression(fit_intercept=fit_intercept)
-    mod = Ridge(fit_intercept=fit_intercept, alpha=0.5)
+    mod = Ridge(fit_intercept=fit_intercept, alpha=1)
 
     if vars_categorielles is not None:
         X = set_dummies(dataframe=X, variables=vars_categorielles)
@@ -24,15 +24,15 @@ def appliquer_regression(data, target, k, fit_intercept=True, shuffle=True, vars
 
     # Separation des donnees en k-plis
     kf = KFold(n_splits=k, shuffle=shuffle, random_state=134)
-    liste_erreurs = []
+    liste_scores = []
     for train_idx, test_idx in kf.split(X):
         X_train, X_test = X[train_idx,:], X[test_idx,:]
         y_train, y_test = y[train_idx], y[test_idx]
 
         mod.fit(X_train, y_train)
         score = mod.score(X_test, y_test)
-        liste_erreurs.append(1 - score)
-    return sum(liste_erreurs)/len(liste_erreurs)
+        liste_scores.append(score)
+    return sum(liste_scores)/len(liste_scores)
 
 
 # Prend en entree un jeu de donnees Pandas,
@@ -63,16 +63,16 @@ def meilleur_modele(data, target, vars_categorielles=None, excel_writer=None, sh
             if len(vars_categorielles_actuelles) == 0:
                 vars_categorielles_actuelles = None
 
-            err = appliquer_regression(data=jd, target=y, k=k, vars_categorielles=vars_categorielles_actuelles)
+            coeff_det = appliquer_regression(data=jd, target=y, k=k, vars_categorielles=vars_categorielles_actuelles)
 #            vars = [i for i in range(idx_1, idx_2+1)]
-            resultats.append([noms_variables, err])
+            resultats.append([noms_variables, coeff_det])
 
     resultats = np.array(resultats)
     resultats_pd = pd.DataFrame(resultats)
     if excel_writer is not None:
-        resultats_pd.to_excel(excel_writer, sheet_name=sheet_name, header=['Variables', 'Erreur'])
-    meill_err_idx = np.argmin(resultats[:,1])
-    return resultats[meill_err_idx,:]
+        resultats_pd.to_excel(excel_writer, sheet_name=sheet_name, header=['Variables', 'Coeff de determination'])
+    meill_coeff_idx = np.argmax(resultats[:,1])
+    return resultats[meill_coeff_idx,:]
 
 def set_dummies(dataframe, variables):
     for var in variables:

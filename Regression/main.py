@@ -12,7 +12,9 @@ pd.set_option("display.max_columns", None) # Permet de voir toutes les colonnes 
 
 # Analyses preliminaires
 #print(x.corr())
+#print(x.corr(method='spearman'))
 # NOTES: Correlation assez elevee entre certaines variables explicatives, probablement mieux d'utiliser regression Ridge
+
 taille = x.shape[1]
 nb_cols = round(math.sqrt(taille))
 vars_x = x.columns
@@ -20,13 +22,15 @@ fig, subfigs = pyplot.subplots(nb_cols, nb_cols, tight_layout=True)
 
 label_y = y.columns[0]
 for variable, subfig in zip(vars_x, subfigs.reshape(-1)):
+    print(x[variable].shape)
+    print(y.shape)
     label_x = variable
     subfig.scatter(x[variable], y, s=1)
     subfig.set_ylabel(label_y)
     subfig.set_xlabel(label_x)
 
-writer = pd.ExcelWriter('save_test.xlsx')
-corr = x.corrwith(y.squeeze())
+writer = pd.ExcelWriter('corr_spearman.xlsx')
+corr = x.corrwith(y.squeeze(), method='spearman')
 corr = pd.DataFrame(corr)
 corr['SELECT'] = 0
 vars_corr = abs(corr[0]) > 0.1
