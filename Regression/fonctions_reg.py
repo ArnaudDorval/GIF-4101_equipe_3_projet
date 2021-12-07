@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression, Ridge
-from sklearn.model_selection import KFold
+from sklearn.model_selection import train_test_split
 from sklearn import datasets
 from matplotlib import pyplot
 from math import sqrt, ceil
@@ -14,25 +14,17 @@ def appliquer_regression(data, target, k, fit_intercept=True, shuffle=True, vars
     # Copie de data et target pour pouvoir les manipuler librement
     X, y = data, target
 #    mod = LinearRegression(fit_intercept=fit_intercept)
-    mod = Ridge(fit_intercept=fit_intercept, alpha=1)
+    mod = Ridge(fit_intercept=fit_intercept, alpha=0.9)
 
     if vars_categorielles is not None:
         X = set_dummies(dataframe=X, variables=vars_categorielles)
 
     X = X.to_numpy()
     y = y.to_numpy()
-
-    # Separation des donnees en k-plis
-    kf = KFold(n_splits=k, shuffle=shuffle, random_state=134)
-    liste_scores = []
-    for train_idx, test_idx in kf.split(X):
-        X_train, X_test = X[train_idx,:], X[test_idx,:]
-        y_train, y_test = y[train_idx], y[test_idx]
-
-        mod.fit(X_train, y_train)
-        score = mod.score(X_test, y_test)
-        liste_scores.append(score)
-    return sum(liste_scores)/len(liste_scores)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.7)
+    mod.fit(X_train, y_train)
+    score = mod.score(X_test, y_test)
+    return score
 
 
 # Prend en entree un jeu de donnees Pandas,
