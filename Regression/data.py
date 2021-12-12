@@ -5,6 +5,9 @@ import pandas as pd
 import pyodbc
 import numpy as np
 import datetime
+import math
+from scipy import stats
+from matplotlib import pyplot
 
 server = '24.122.207.31\MSSQLSERVER,1433'
 database = 'AI_Hospital'
@@ -64,9 +67,9 @@ class Data:
         """
 
         #normalisation du vecteur y
-        y_norm = y.values/y.values.max(axis=0)
+#        y_norm = y.values/y.values.max(axis=0)
 #        y['TAUX_OCC_MOY'] = y_norm
-        y['TAUX_OCC'] = y_norm
+#        y['TAUX_OCC'] = y_norm
 
         #Extraire donnees du Timestamp
         x['LOCAL_TIME'] = pd.to_datetime(x['LOCAL_TIME'], dayfirst=True)
@@ -81,13 +84,53 @@ class Data:
     def get_x_y(self):
         return self.x, self.y
 
+    # Normalisation de variables
+    # Par defaut, normalise toutes les var. numeriques
+    def normalize(self, X, liste_vars=['NB_PATIENT_CIV_24_H',
+                               'NB_PATIENT_CIV_48_H', 'TEMP', 'HUMIDITY', 'PRESSURE', 'VISIBILITY', 'WIND_SPEED'], plot=True):
+        # Iteration sur toutes les variables a normaliser
+        if plot:
+            lim_inf = -20
+            lim_sup = 20
+
+            # Nombre de graphiques a imprimer
+            taille = len(liste_vars)
+            nb_cols = round(math.sqrt(taille))
+            fig, subfigs = pyplot.subplots(nb_cols, nb_cols, tight_layout=True)
+            for var, subfig in zip(liste_vars, subfigs.reshape(-1)):
+                if (X[var] <= 0).any():
+                    val_min = X[var].min()
+                    X[var] = X[var] + abs(val_min) + 1
+
+                norm_data, lmda = stats.boxcox(X[var])
+                stats.boxcox_normplot(X[var], lim_inf, lim_sup, plot=subfig)
+                subfig.set_title(var)
+                subfig.axvline(lmda, color='red')
+                subfig.set_xticks([lmda])
+                X[var] = norm_data
+            pyplot.show()
+
+            fig2, subfigs2 = pyplot.subplots(nb_cols, nb_cols, tight_layout=True)
+            for var, subfig in zip(liste_vars, subfigs2.reshape(-1)):
+                norm_data, lmda = stats.boxcox(X[var])
+                stats.boxcox_normplot(X[var], lim_inf, lim_sup, plot=subfig)
+                subfig.hist(norm_data)
+                subfig.set_title(var)
+            pyplot.show()
+        else:
+            for var in liste_vars:
+                if (X[var] <= 0).any():
+                    val_min = X[var].min()
+                    X[var] = X[var] + abs(val_min) + 1
+                norm_data, lmda = stats.boxcox(X[var])
+                X[var] = norm_data
+
+
 if __name__ == '__main__':
     data = Data()
     X,Y=data.get_x_y()
     pd.set_option("display.max_columns", None)  # Permet de voir toutes les colonnes du DF
-    print(X.head())
-#    print(X.shape)
-#    print(d)
+    data.normalize()
     #print(X.values[0])
     #print(X.values[0].size)
     #print(X.columns)

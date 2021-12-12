@@ -5,11 +5,13 @@ from sklearn.preprocessing import minmax_scale
 from matplotlib import pyplot
 import math
 from perceptron import run_perceptron
-
+pd.set_option("display.max_columns", None) # Permet de voir toutes les colonnes du DF
 donnees = fr.Data()
 x,y = donnees.get_x_y()
-#pd.set_option("display.max_columns", None) # Permet de voir toutes les colonnes du DF
-run_perceptron(x,y)
+donnees.normalize(X=x, plot=False)
+print(x)
+
+#run_perceptron(x,y)
 
 # Analyses preliminaires
 #print(x.corr())
@@ -31,8 +33,8 @@ for variable, subfig in zip(vars_x, subfigs.reshape(-1)):
     subfig.scatter(x[variable], y, s=1)
     subfig.set_ylabel(label_y)
     subfig.set_xlabel(label_x)
-
-writer = pd.ExcelWriter('reg_lin_1_par_jr.xlsx')
+"""
+writer = pd.ExcelWriter('reg_alpha_variable.xlsx')
 #corr = x.corrwith(y.squeeze(), method='spearman')
 #corr = pd.DataFrame(corr)
 #corr['SELECT'] = 0
@@ -52,7 +54,7 @@ d = fr.meilleur_modele(data=x, target=y, vars_categorielles=donnees.vars_cat, ex
 #X_percept = x[meilleures_vars]
 #run_perceptron(X_percept, y)
 
-d = pd.DataFrame(d, index=['model', 'err'], columns=['Sans normalisation'])
+d = pd.DataFrame(d, index=['model', 'alpha', 'err'], columns=['Sans normalisation'])
 d.to_excel(writer, sheet_name='Meilleur_modele')
 
 # Normalisation de toutes les variables numeriques
@@ -65,4 +67,3 @@ writer.save()
 #fig.set_size_inches(25, 10)
 #pyplot.savefig(fname='relations.png')
 #pyplot.show()
-"""
