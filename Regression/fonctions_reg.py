@@ -83,9 +83,5 @@ def set_dummies(dataframe, variables):
     for var in variables:
 
         # Permet d'ajouter facilement les colonnes au np.array
-        dataframe = pd.get_dummies(dataframe, columns=[var])
-
-        # On doit retirer la derniere colonne pour que la regression soit coherente
-        col_a_enlever = dataframe.columns[-1]
-        dataframe.drop(labels=col_a_enlever, axis=1, inplace=True)
+        dataframe = pd.get_dummies(dataframe, columns=[var], drop_first=True)
     return dataframe

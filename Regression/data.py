@@ -18,8 +18,9 @@ password = 'ai_password'
 class Data:
     def __init__(self):
         #Connexion à la base de données
-        cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE='+ database + ';UID=' + username + ';PWD=' + password)
+        self.cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE='+ database + ';UID=' + username + ';PWD=' + password)
 
+        """
         #Construction dataframe
         y = pd.read_sql("SELECT round(cast (NB_CIV_OCC as float)/cast(NB_CIV_FONC as float),2) as TAUX_OCC from MAIN ", cnxn, columns = ['TAUX_OCC'])
 #        y = pd.read_sql("SELECT round(sum(cast (NB_CIV_OCC as float)) / sum(cast(NB_CIV_FONC as float)),3) as TAUX_OCC_MOY from MAIN group by dbo.DATE_OF(LOCAL_TIME), NOM_HOSPITAL", cnxn, columns = ['TAUX_OCC_MOY'])
@@ -43,7 +44,6 @@ class Data:
         x['WEATHER_DESCRIPTION'] = conv_weather_desc
         x['NOM_HOSPITAL'] = conv_nom_hop
         x['WEATHER'] = conv_weather
-        """
         # Conversion des variables categorielles pour avoir une categorie par hopital, par jour
         unique_times = pd.unique(x['LOCAL_TIME'])
         nb_hopitaux = len(self.dict_nom_hop)
@@ -64,7 +64,7 @@ class Data:
         # Regroupement des observations pour avoir une ligne par hopital, par jour
         x = x.groupby(['LOCAL_TIME', 'NOM_HOSPITAL']).mean().reset_index()
         x = x.round(decimals=3)
-        """
+        
 
         #normalisation du vecteur y
 #        y_norm = y.values/y.values.max(axis=0)
@@ -80,6 +80,93 @@ class Data:
 
         self.x=x
         self.y=y
+        """
+
+    # Permet d'aller chercher les donnees de la BD dans le format demande (par heure ou par jour)
+    def fetch_data(self, format='by_hour'):
+        if (format == 'by_hour'):
+            y = pd.read_sql(
+                "SELECT round(cast (NB_CIV_OCC as float)/cast(NB_CIV_FONC as float),2) as TAUX_OCC from MAIN ", self.cnxn,
+                columns=['TAUX_OCC'])
+
+            x = pd.read_sql("SELECT"
+                            " LOCAL_TIME, NOM_HOSPITAL, NB_PATIENT_CIV_24_H,"
+                            "NB_PATIENT_CIV_48_H, TEMP, HUMIDITY, PRESSURE, VISIBILITY, WIND_SPEED,WEATHER, WEATHER_DESCRIPTION FROM MAIN",
+                            self.cnxn, columns=['LOCAL_TIME', 'NOM_HOSPITAL', 'NB_PATIENT_CIV_24_H',
+                                           'NB_PATIENT_CIV_48_H', 'TEMP', 'HUMIDITY', 'PRESSURE', 'VISIBILITY',
+                                           'WIND_SPEED', 'WEATHER', 'WEATHER_DESCRIPTION'])
+            self.categorical_conversion(x)
+
+            # Extraction des donnees du Timestamp
+            x['LOCAL_TIME'] = pd.to_datetime(x['LOCAL_TIME'], dayfirst=True)
+            x['MOIS'] = x['LOCAL_TIME'].dt.month
+            x['HEURE'] = x['LOCAL_TIME'].dt.hour
+            x['JOUR'] = x['LOCAL_TIME'].dt.dayofweek
+            x.drop('LOCAL_TIME', axis=1, inplace=True)
+
+            self.x = x
+            self.y = y
+
+        elif (format == 'by_day'):
+
+            y = pd.read_sql(
+                "SELECT round(sum(cast (NB_CIV_OCC as float)) / sum(cast(NB_CIV_FONC as float)),3) as TAUX_OCC_MOY from MAIN group by dbo.DATE_OF(LOCAL_TIME), NOM_HOSPITAL",
+                self.cnxn, columns = ['TAUX_OCC_MOY'])
+
+            x = pd.read_sql("SELECT"
+                                   " dbo.DATE_OF(LOCAL_TIME) as LOCAL_TIME, NOM_HOSPITAL, avg(NB_PATIENT_CIV_24_H) as NB_PATIENT_CIV_24_H_AVG,"
+                                   "avg(NB_PATIENT_CIV_48_H) as NB_PATIENT_CIV_48_H_AVG, avg(TEMP) as TEMP_AVG, avg(HUMIDITY) as HUMIDITY_AVG, avg(PRESSURE) as PRESSURE_AVG, avg(VISIBILITY) as VISIBILITY_AVG, avg(WIND_SPEED) as WIND_SPEED_AVG,WEATHER, WEATHER_DESCRIPTION from MAIN group by NOM_HOSPITAL, dbo.DATE_OF(LOCAL_TIME), WEATHER, WEATHER_DESCRIPTION",
+                            self.cnxn, columns=['LOCAL_TIME', 'NOM_HOSPITAL','NB_PATIENT_CIV_24_H',
+                                                 'NB_PATIENT_CIV_48_H', 'TEMP', 'HUMIDITY', 'PRESSURE', 'VISIBILITY',
+                                                'WIND_SPEED', 'WEATHER', 'WEATHER_DESCRIPTION'])
+            self.categorical_conversion(x)
+
+            # Conversion des variables categorielles pour avoir une categorie par hopital, par jour
+            unique_times = pd.unique(x['LOCAL_TIME'])
+            nb_hopitaux = len(self.dict_nom_hop)
+            for t in unique_times:
+                for hosp in range(nb_hopitaux):
+                    weather = (x[(x['NOM_HOSPITAL'] == hosp) & (x['LOCAL_TIME'] == t)])['WEATHER'].to_numpy()
+                    weather_descriptions = (x[(x['NOM_HOSPITAL'] == hosp) & (x['LOCAL_TIME'] == t)])[
+                        'WEATHER_DESCRIPTION'].to_numpy()
+
+                    weather_types, weather_counts = np.unique(weather, return_counts=True)
+                    weather_desc_types, weather_desc_counts = np.unique(weather_descriptions, return_counts=True)
+
+                    # Extrait la position de la valeur la plus frequente
+                    wt_idx_mode = np.argmax(weather_counts)
+                    wt_desc_idx_mode = np.argmax(weather_desc_counts)
+                    x['WEATHER'].where(~((x.NOM_HOSPITAL == hosp) & (x.LOCAL_TIME == t)),
+                                       other=weather_types[wt_idx_mode], inplace=True)
+                    x['WEATHER_DESCRIPTION'].where(~((x.NOM_HOSPITAL == hosp) & (x.LOCAL_TIME == t)),
+                                                   other=weather_desc_types[wt_desc_idx_mode], inplace=True)
+
+            # Regroupement des observations pour avoir une ligne par hopital, par jour
+            x = x.groupby(['LOCAL_TIME', 'NOM_HOSPITAL']).mean().reset_index()
+            x = x.round(decimals=3)
+
+            # Conversion des donnees du Timestamp
+            x['LOCAL_TIME'] = pd.to_datetime(x['LOCAL_TIME'], dayfirst=True)
+            x['MOIS'] = x['LOCAL_TIME'].dt.month
+            x['JOUR'] = x['LOCAL_TIME'].dt.dayofweek
+            x.drop('LOCAL_TIME', axis=1, inplace=True)
+
+            self.x = x
+            self.y = y
+
+
+
+    def categorical_conversion(self, df):
+        conv_weather_desc, self.dict_weather_desc = pd.factorize(df['WEATHER_DESCRIPTION'])
+        conv_nom_hop, self.dict_nom_hop = pd.factorize(df['NOM_HOSPITAL'])
+        conv_weather, self.dict_weather = pd.factorize(df['WEATHER'])
+
+        self.vars_cat = ['WEATHER_DESCRIPTION','NOM_HOSPITAL', 'WEATHER']
+
+        df['WEATHER_DESCRIPTION'] = conv_weather_desc
+        df['NOM_HOSPITAL'] = conv_nom_hop
+        df['WEATHER'] = conv_weather
+
 
     def get_x_y(self):
         return self.x, self.y
