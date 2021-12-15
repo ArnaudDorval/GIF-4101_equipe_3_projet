@@ -86,7 +86,10 @@ class Data:
             # Reformatting the data to get the class index from the number of used stretchers divided by the number of
             # available stretchers rounded to closest step
             reformat = numpy.vectorize(lambda x: min(norm, key=lambda y: abs(x - y)))
-            self.y, self.explicit_y = pd.factorize(reformat((df['NB_CIV_OCC'] / df['NB_CIV_FONC']).array))
+            civ_occ = df['NB_CIV_OCC'].mask(temp.isnull(), pd.NA).dropna()
+            civ_disp = df['NB_CIV_FONC'].mask(temp.isnull(), pd.NA).dropna()
+            u = civ_disp/civ_occ
+            self.y, self.explicit_y = pd.factorize(reformat(u.array))
 
 
 
