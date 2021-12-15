@@ -16,50 +16,51 @@ liste_hopital = ["Le Centre hospitalier de l'Universit Laval", "Hpital Saint-Fra
                  "Institut universitaire de cardiologie et de pneumologie de Qubec"]
 
 class Data:
-
-    def __init__(self, _step=0.25, _max=1.75, p_list = ['HEURE', 'WEATHER'], type_y = "variation-1"):
+    _classification = ["hourly_variation", "step_variation", "regression"]
+    _normalization = ["min-max", "mean", "none"]
+    def __init__(self, _step=0.25, _max=1.75, classification = _classification[0], normalization = _normalization[0]):
         # Connect to the database
         cnxn = pyodbc.connect(
             'DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE='
             + database + ';UID=' + username + ';PWD=' + password)
         # Load data from the database
         df = pd.read_sql("select * from MAIN", cnxn)
-        self.size = len(df.index)
 
-        temp = df[['LOCAL_TIME', 'NB_CIV_OCC', 'NOM_HOSPITAL']].groupby("NOM_HOSPITAL", as_index=False)\
-            .apply(
-            lambda x: (x.NB_CIV_OCC - x.NB_CIV_OCC.shift())
-                .where((x.LOCAL_TIME - x.LOCAL_TIME.shift()).dt.total_seconds()/60 < 120))\
-            .reset_index(level=0).sort_index()['NB_CIV_OCC']
+        self.y = pd.DataFrame()
+        if classification == "hourly_variation":
+            # Hourly variation (-1 iq)
+            temp = df[['LOCAL_TIME', 'NB_CIV_OCC', 'NOM_HOSPITAL']].groupby("NOM_HOSPITAL", as_index=False)\
+                .apply(
+                lambda x: (x.NB_CIV_OCC - x.NB_CIV_OCC.shift())
+                    .where((x.LOCAL_TIME - x.LOCAL_TIME.shift()).dt.total_seconds()/60 < 120))\
+                .reset_index(level=0).sort_index()['NB_CIV_OCC']
+            # Drop the rows of every NA values
+            df = df.mask(temp.isnull(), pd.NA).dropna().reset_index(level=0, drop=True)
+            self.y, _ = pd.factorize(temp.dropna().reset_index(level=0, drop=True))
+        elif classification == "step_variation":
+            norm = numpy.zeros(round(_max / _step))
+            for i in range(len(norm)):
+                norm[i] = (i + 1) * _step
+            reformat = numpy.vectorize(lambda x: min(norm, key=lambda y: abs(x - y)))
+            self.y, _ = pd.factorize(reformat((df['NB_CIV_OCC'] / df['NB_CIV_FONC']).array))
 
-        # X has 3 dimension : weather, day of the week, hour of the day
-        # y correspond to ratio of used stretchers rounded to _step bounded between 0 and _max
-        self.X = numpy.zeros((temp.dropna().size, len(p_list)))
-        self.y = numpy.zeros(temp.dropna().size)
-        self.feature_names = numpy.array(p_list)
+        self.X = pd.DataFrame()
 
-        for index, val in enumerate(p_list):
-            temp_data = []
+        # Third column correspond to the hour of the day (0-23)
+        self.X['HEURE'] = df['LOCAL_TIME'].dt.hour
+        # Second column correspond to the day of the week (0-6)
+        self.X['JOUR'] = df['LOCAL_TIME'].dt.dayofweek
+        self.X['WEATHER_DESCRIPTION'], _ = pd.factorize(df['WEATHER_DESCRIPTION'])
+        self.X['TEMP'], _ = pd.factorize(df['TEMP'])
+        self.X['HUMIDITY'], _ = pd.factorize(df['HUMIDITY'])
+        self.X['WEATHER'], _ = pd.factorize(df['WEATHER'])
 
-            if val == 'HEURE':
-                # Third column correspond to the hour of the day (0-23)
-                temp_data = df['LOCAL_TIME'].dt.hour.mask(temp.isnull(), pd.NA).dropna().apply(lambda x: x - 1 % 24)
-            elif val == "JOUR":
-                # Second column correspond to the day of the week (0-6)
-                temp_data = df['LOCAL_TIME'].dt.dayofweek.mask(temp.isnull(), pd.NA).dropna()
-            elif val == 'WEATHER_DESCRIPTION':
-                # First column correspond to the normalized weather data, we're also saving the types of weather
-                # identifying the numerical value
-                temp_data, self.explicite_weather_desc = pd.factorize(df['WEATHER_DESCRIPTION'].mask(temp.isnull(), pd.NA).dropna())
-            elif val == 'TEMP':
-                temp_data, self.explicit_temp = pd.factorize(df['TEMP'].mask(temp.isnull(), pd.NA).dropna())
-            elif val == 'HUMIDITY':
-                temp_data, self.explicit_humidity = pd.factorize(df['HUMIDITY'].mask(temp.isnull(), pd.NA).dropna())
-            elif val == 'WEATHER':
-                temp_data, self.explicite_weather = pd.factorize(df['WEATHER'].mask(temp.isnull(), pd.NA).dropna())
+        if normalization == "min-max":
+            self.X = (self.X - self.X.min())/(self.X.max() - self.X.min())
+        elif normalization == "mean":
+            self.X = (self.X - self.X.mean())/self.X.std()
 
-            self.X[:, index] = temp_data
-
+        """
         if(type_y == "variation-1"):
             # retourne des classes pour les differente variation heure par heure
             self.y, self.explicit_y = pd.factorize(temp.mask(temp.isnull(), pd.NA).dropna())
@@ -88,7 +89,8 @@ class Data:
             reformat = numpy.vectorize(lambda x: min(norm, key=lambda y: abs(x - y)))
             self.y, self.explicit_y = pd.factorize(reformat((df['NB_CIV_OCC'] / df['NB_CIV_FONC']).array))
 
-
+        self.X = df
+        """
 
     def __call__(self):
         return self.X, self.y

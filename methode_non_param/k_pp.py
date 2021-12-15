@@ -8,10 +8,10 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 
 
-def non_parametric_models(data, transform = 'norm'):
+def non_parametric_models(data, list, transform = 'norm'):
     X, y = data()
     n = range(1, 100)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+    X_train, X_test, y_train, y_test = train_test_split(X[list], y, test_size=0.25)
 
     #normalisation/standardization
     if (transform == 'standardization'):
@@ -23,7 +23,7 @@ def non_parametric_models(data, transform = 'norm'):
         # transform testing dataabs
         X_test = norm.transform(X_test)
 
-    metrics = ["euclidean", "manhattan", "chebyshev", "minkowski"]
+    metrics = ["euclidean"] #, "manhattan", "chebyshev", "minkowski"]
     tmp_score = 0
     new_score = 0
     best_k = 0

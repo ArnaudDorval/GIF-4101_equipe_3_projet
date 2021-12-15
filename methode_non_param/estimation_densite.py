@@ -5,7 +5,7 @@ from sklearn.neighbors import KernelDensity
 from sklearn.model_selection import train_test_split
 import numpy as np
 
-def kernel_density_model(data):
+def kernel_density_model(data, list):
     X, y = data()
     kernel = ['gaussian', 'tophat', 'epanechnikov', 'exponential', 'linear', 'cosine']
     metrics = ["euclidean", "manhattan", "chebyshev", "minkowski"]
@@ -18,7 +18,7 @@ def kernel_density_model(data):
     best_bandwidth = 0
     best_clf = KernelDensity()
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+    X_train, X_test, y_train, y_test = train_test_split(X[list], y, test_size=0.25)
 
     for i in range(len(kernel)):
         tmp_score = 0

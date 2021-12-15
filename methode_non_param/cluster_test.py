@@ -54,7 +54,7 @@ def cluster_kmeans(data, p_list):
 
     X, y = data()
 
-    X = minmax_scale(X, feature_range=(0, 1), axis=0, copy=True)
+    X = minmax_scale(X[p_list], feature_range=(0, 1), axis=0, copy=True)
 
 
     clst_size = list(range(20, 50, 2))
@@ -93,5 +93,5 @@ def cluster_kmeans(data, p_list):
     pyplot.ylim([min_y, max_y])
 
     file_name = "cluster_graph_1/" + str(datetime.now())
-    pyplot.savefig(file_name)
+    #pyplot.savefig(file_name)
     pyplot.show()

@@ -2,15 +2,16 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
 
-def decision_tree_models(data):
+def decision_tree_models(data, list):
     X, y = data()
+
     max_it = range(1, 20)
     tmp_score = 0
 
     best_max_iter = 0
     best_clf = DecisionTreeClassifier()
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+    X_train, X_test, y_train, y_test = train_test_split(X[list], y, test_size=0.25)
     print("")
     for k in max_it:
         clf = DecisionTreeClassifier(random_state=0, max_depth=k)

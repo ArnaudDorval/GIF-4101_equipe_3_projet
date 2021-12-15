@@ -5,13 +5,13 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler, minmax_scale
 from sklearn.svm import SVC
 
-def svm(data):
+def svm(data, list):
     X, y = data()
 
     kernel = ['linear', 'poly', 'rbf', 'sigmoid', 'precomputed']
 
     X = minmax_scale(X, feature_range=(0, 1), axis=0, copy=True)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.50)
+    X_train, X_test, y_train, y_test = train_test_split(X[list], y, test_size=0.50)
 
 
     d = cdist(X_train, X_train)

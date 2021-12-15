@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
 
-def decision_random_tree_models(data):
+def decision_random_tree_models(data, list):
     X, y = data()
     max_it = range(1, 100)
     max_depth = range(1, 20)
@@ -15,7 +15,7 @@ def decision_random_tree_models(data):
     best_max_ft = 0
     best_clf = DecisionTreeClassifier()
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+    X_train, X_test, y_train, y_test = train_test_split(X[list], y, test_size=0.25)
     #print("")
 
 
