@@ -48,11 +48,10 @@ class Data:
             df_low = df.drop(df[df['variation'] > -1].index)
             df_low = df_low.drop(df_low[df_low['variation'] < -lim_high].index)
 
-
             df = pd.concat([df_low, df_high])
             column_values = df[['variation']].values
             print(numpy.unique(column_values))
-            #df.reset_index(inplace=True)
+            df.reset_index(inplace=True)
             self.y, _ = pd.factorize(df['variation'])
             #self.y, _ = pd.factorize(temp.dropna().reset_index(level=0, drop=True))
 
