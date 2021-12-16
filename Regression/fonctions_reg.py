@@ -77,11 +77,22 @@ def meilleur_modele(data, target, normalisees, vars_categorielles=None, excel_wr
                              alpha=resultats[meill_coeff_idx, 1])
         fig = pyplot.figure()
         ax = fig.add_subplot(111)
-        ax.set_title('Meilleur modele, alpha = {:.1f}'.format(resultats[meill_coeff_idx,1]))
-        ax.scatter(x=y, y=pred)
+        ax.scatter(x=y, y=pred, color='indianred')
+        ax.plot(np.array([0,2]), np.array([0,2]), color='black', label="x=y line")
         ax.set_xlabel('Valeurs reelles')
         ax.set_ylabel('Valeurs predites')
-        pyplot.show()
+        ax.set_xlim([0, y.max()])
+        ax.set_ylim([pred.min() - 0.05, pred.max()])
+        ax.legend(loc='upper left')
+        fig.set_size_inches(25, 10)
+        if normalisees:
+            ax.set_title('Meilleur modele, donnees transformees, alpha = {:.1f}'.format(resultats[meill_coeff_idx,1]),
+                         fontsize=20)
+            pyplot.savefig(fname="predictions_boxcox.png")
+        else:
+            ax.set_title('Meilleur modele, donnees originales',
+                         fontsize=20)
+            pyplot.savefig(fname="predictions_original.png")
 
     return resultats[meill_coeff_idx,:]
 

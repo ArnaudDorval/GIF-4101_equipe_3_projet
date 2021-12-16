@@ -24,9 +24,11 @@ liste_hopital = ["Le Centre hospitalier de l'Universit Laval", "Hpital Saint-Fra
 class Data:
     _classification = ["hourly_variation", "step_variation", "regression"]
     _normalization = ["min-max", "mean", "none"]
+    _types = ["hourly", "by_day"]
+    _categorical = ["WEATHER", "WEATHER_DESCRIPTION", "NOM_HOSPITAL"]
 
-    def __init__(self, _step = 0.25, _max = 1.75, classification = _classification[0], type_y = 'hourly',
-                 categorical = ['WEATHER', 'WEATHER_DESCRIPTION', 'NOM_HOSPITAL'], normalization = _normalization[0]):
+    def __init__(self, _step = 0.25, _max = 1.75, classification = _classification[0], type_y = _types[0],
+                 categorical = _categorical, normalization = _normalization[0]):
         # Connection to the database
         cnxn = pyodbc.connect(
             'DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE='
@@ -108,7 +110,9 @@ class Data:
                 df.drop('LOCAL_TIME', axis=1, inplace=True)
 
                 self.y = df['TAUX_OCC']
+                self.categorical_conversion(df)
                 self.X = df.drop(labels=['TAUX_OCC', 'NB_CIV_OCC', 'NB_CIV_FONC'], axis=1)
+
 
             elif (type_y == 'by_day'):
                 # Extraction of the "date" portion of the TimeStamp
@@ -131,6 +135,7 @@ class Data:
                 #                df.drop('DATE', axis=1, inplace=True)
 
                 self.y = new_df['TAUX_OCC_MOYEN']
+                self.categorical_conversion(new_df)
                 self.X = new_df.drop(labels=['TAUX_OCC_MOYEN', 'NB_CIV_OCC', 'NB_CIV_FONC'], axis=1)
 
 
@@ -171,16 +176,11 @@ class Data:
                 subfig.set_title(var)
                 subfig.axvline(lmda, color='red')
                 subfig.set_xticks([lmda])
-                X[var] = norm_data
-            pyplot.show()
 
-            fig2, subfigs2 = pyplot.subplots(nb_cols, nb_cols, tight_layout=True)
-            for var, subfig in zip(liste_vars, subfigs2.reshape(-1)):
-                norm_data, lmda = stats.boxcox(X[var])
-                stats.boxcox_normplot(X[var], lim_inf, lim_sup, plot=subfig)
-                subfig.hist(norm_data)
-                subfig.set_title(var)
-            pyplot.show()
+                X[var] = norm_data
+            fig.suptitle("Boxcox Transformations")
+            pyplot.savefig(fname="boxcox.png")
+            
         else:
             for var in liste_vars:
                 if (X[var] <= 0).any():
