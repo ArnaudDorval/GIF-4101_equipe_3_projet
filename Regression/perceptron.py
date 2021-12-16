@@ -25,12 +25,11 @@ def run_perceptron(x,y):
                 score = pmc_regr.score(X_test, numpy.ravel(y_test))
                 resultats.append([l_size, fct_activ, moment, score])
 
-    excel_writer = pd.ExcelWriter('perceptron_par_h_1300.xlsx')
+    excel_writer = pd.ExcelWriter('perceptron_par_h_1300_iter.xlsx')
 
     resultats = numpy.asarray(resultats)
     meill_coeff_idx = numpy.argmax(resultats[:, 3].astype(float))
     meilleurs_res = resultats[meill_coeff_idx, :]
-    print(meilleurs_res)
 
     resultats_pd = pd.DataFrame(resultats)
     resultats_pd.to_excel(excel_writer, sheet_name='Results',
