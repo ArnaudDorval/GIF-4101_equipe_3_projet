@@ -28,7 +28,7 @@ def test_all_combination_knn(data):
                 print(tmp)
                 non_parametric_models(data, tmp)
 
-def test_all_combination_tree(data):
+def test_all_combination_linear():
     for r in range(len(list_param) + 1):
         combinations_object = itertools.combinations(list_param, r)
         combinations_list = list(combinations_object)
@@ -36,8 +36,19 @@ def test_all_combination_tree(data):
             if len(comb) > 0:
                 tmp = np.asarray(comb)
                 print(tmp)
-                decision_tree_models(data, tmp)
+                data = Data(p_list= tmp)
+                linear_models(data)
 
+def test_all_combination_tree():
+    for r in range(len(list_param) + 1):
+        combinations_object = itertools.combinations(list_param, r)
+        combinations_list = list(combinations_object)
+        for comb in combinations_list:
+            if len(comb) > 0:
+                tmp = np.asarray(comb)
+                print(tmp)
+                data = Data(p_list= tmp)
+                decision_tree_models(data)
 
 def test_all_combination_random_tree(data):
     for r in range(len(list_param) + 1):
@@ -82,6 +93,7 @@ def main():
     data = Data()
     #data = Data(type_y="variation")
     x, y = data()
+    print("ok")
     """plt.hist(data.y)  # density=False would make counts
     plt.ylabel('Probability')
     plt.xlabel('Data')
@@ -89,7 +101,7 @@ def main():
     plt.show()"""
     """
     #y = minmax_scale(y, feature_range=(1, 2), axis=0, copy=True)
-    n = y > 0
+    """n = y > 0
     w = y[n].reshape(-1,1)
     norm = stats.boxcox(w)
 
@@ -99,13 +111,12 @@ def main():
     sns.distplot(norm, ax=ax[1])
     ax[1].set_title("Normalized data")
     plt.show()
-    """
+
     #decision_random_tree_models(data)
     test_all_combination_knn(data)
 
     #non_parametric_models(data)
 
-    #linear_models(data)
     #svm(data)
     #kernel_density_model(data)
     #test_all_kernel(data)

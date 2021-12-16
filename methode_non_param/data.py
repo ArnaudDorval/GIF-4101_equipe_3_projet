@@ -2,6 +2,7 @@ import numpy
 # https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver15
 import pyodbc
 import pandas as pd
+from sklearn.model_selection import train_test_split
 
 server = r'24.122.207.31\MSSQLSERVER,1433'
 database = 'AI_Hospital'
@@ -36,7 +37,25 @@ class Data:
                 .reset_index(level=0).sort_index()['NB_CIV_OCC']
             # Drop the rows of every NA values
             df = df.mask(temp.isnull(), pd.NA).dropna().reset_index(level=0, drop=True)
-            self.y, _ = pd.factorize(temp.dropna().reset_index(level=0, drop=True))
+
+            df["variation"] = temp.dropna().reset_index(level=0, drop=True)
+            column_values = df[['variation']].values
+            print(numpy.unique(column_values))
+            lim_low = 0
+            lim_high = 8
+            df_high = df.drop(df[df['variation'] < lim_low].index)
+            df_high = df_high.drop(df_high[df_high['variation'] > lim_high].index)
+            df_low = df.drop(df[df['variation'] > -1].index)
+            df_low = df_low.drop(df_low[df_low['variation'] < -lim_high].index)
+
+
+            df = pd.concat([df_low, df_high])
+            column_values = df[['variation']].values
+            print(numpy.unique(column_values))
+            #df.reset_index(inplace=True)
+            self.y, _ = pd.factorize(df['variation'])
+            #self.y, _ = pd.factorize(temp.dropna().reset_index(level=0, drop=True))
+
         elif classification == "step_variation":
             norm = numpy.zeros(round(_max / _step))
             for i in range(len(norm)):
@@ -60,6 +79,9 @@ class Data:
         elif normalization == "mean":
             self.X = (self.X - self.X.mean())/self.X.std()
 
+        self.X, X_test, self.y, y_test = train_test_split(self.X, self.y, test_size=0.75)
+        self.final_df = X_test
+        self.final_df['target'] = y_test
         """
         if(type_y == "variation-1"):
             # retourne des classes pour les differente variation heure par heure
@@ -101,3 +123,6 @@ class Data:
     def group_data(self):
         #permet de grouper les datas ex par bloc de 6h
         pass
+
+    def final_data(self):
+        return self.final_df
