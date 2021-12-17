@@ -28,6 +28,8 @@ class Data:
         df = pd.read_sql("select * from MAIN", cnxn)
 
         self.y = pd.DataFrame()
+        self.X = pd.DataFrame()
+
         if classification == "hourly_variation":
             # Hourly variation (-1 iq)
             temp = df[['LOCAL_TIME', 'NB_CIV_OCC', 'NOM_HOSPITAL']].groupby("NOM_HOSPITAL", as_index=False)\
@@ -52,17 +54,59 @@ class Data:
             column_values = df[['variation']].values
             print(numpy.unique(column_values))
             df.reset_index(inplace=True)
-            self.y, _ = pd.factorize(df['variation'])
+            self.y, self.y_explicite = pd.factorize(df['variation'])
             #self.y, _ = pd.factorize(temp.dropna().reset_index(level=0, drop=True))
+            df = df.iloc[5:, :]
+            temp_y = numpy.delete(self.y, -1)
+            temp_y = numpy.delete(temp_y, -1)
+            temp_y = numpy.delete(temp_y, -1)
+            temp_y = numpy.delete(temp_y, -1)
+            temp_y = numpy.delete(temp_y, -1)
+
+            self.y = numpy.delete(self.y, 0)
+            self.y = numpy.delete(self.y, 0)
+            self.y = numpy.delete(self.y, 0)
+            self.y = numpy.delete(self.y, 0)
+            self.y = numpy.delete(self.y, 0)
+
+            df['PREVIOUS'] = temp_y
+            print('ok')
+            self.X['PREVIOUS'] = df['PREVIOUS']
 
         elif classification == "step_variation":
             norm = numpy.zeros(round(_max / _step))
             for i in range(len(norm)):
                 norm[i] = (i + 1) * _step
-            reformat = numpy.vectorize(lambda x: min(norm, key=lambda y: abs(x - y)))
-            self.y, _ = pd.factorize(reformat((df['NB_CIV_OCC'] / df['NB_CIV_FONC']).array))
 
-        self.X = pd.DataFrame()
+            w = (df['NB_CIV_OCC'] / df['NB_CIV_FONC']).array
+            temp_y = []
+            for r in w:
+                if(r > 0.25):
+                    if(r > 0.50):
+                        if(r > 0.75):
+                            if(r > 1.00):
+                                if(r > 1.25):
+                                    if(r > 1.50):
+                                        temp_y.append("150-175%")
+                                    else:
+                                        temp_y.append("125-150%")
+                                else:
+                                    temp_y.append("100-125%")
+                            else:
+                                temp_y.append("75-100%")
+                        else:
+                            temp_y.append("50-75%")
+                    else:
+                        temp_y.append("25-50%")
+                else:
+                    temp_y.append("0-25%")
+
+            list_int = ["0-25%", "25-50%", "50-75%", "75-100%", "100-125%", "125-150%", "150-175%"]
+            print(max(w))
+            #reformat = numpy.vectorize(lambda x: min(norm, key=lambda y: abs(x - y)))
+            #self.y, _ = pd.factorize(reformat(r))
+            self.y, self.y_explicite = pd.factorize(temp_y)
+
 
         # Third column correspond to the hour of the day (0-23)
         self.X['HEURE'] = df['LOCAL_TIME'].dt.hour
@@ -73,12 +117,13 @@ class Data:
         self.X['HUMIDITY'], _ = pd.factorize(df['HUMIDITY'])
         self.X['WEATHER'], _ = pd.factorize(df['WEATHER'])
 
+
         if normalization == "min-max":
             self.X = (self.X - self.X.min())/(self.X.max() - self.X.min())
         elif normalization == "mean":
             self.X = (self.X - self.X.mean())/self.X.std()
 
-        self.X, X_test, self.y, y_test = train_test_split(self.X, self.y, test_size=0.75)
+        self.X, X_test, self.y, y_test = train_test_split(self.X, self.y, test_size=0.25)
         self.final_df = X_test
         self.final_df['target'] = y_test
         """

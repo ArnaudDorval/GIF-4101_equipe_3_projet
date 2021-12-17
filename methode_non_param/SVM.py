@@ -9,8 +9,6 @@ def svm(data, list):
     X, y = data()
 
     kernel = ['linear', 'poly', 'rbf', 'sigmoid', 'precomputed']
-
-    X = minmax_scale(X, feature_range=(0, 1), axis=0, copy=True)
     X_train, X_test, y_train, y_test = train_test_split(X[list], y, test_size=0.50)
 
 
@@ -22,25 +20,23 @@ def svm(data, list):
 
     grid_X_train, grid_X_test, grid_y_train, grid_y_test = train_test_split(X_train.copy(), y_train.copy(),
                                                                             test_size=0.5)
+    err = 0
+    s = l = k = 0
+    for sigma in range_sigma:
+        for _lambda in range_lambda:
+            clf = SVC(C=_lambda, gamma=1/sigma, kernel="rbf")
+            clf.fit(grid_X_train, grid_y_train)
+            temp = clf.score(grid_X_test, grid_y_test)
+            if err < temp:
+                err = temp
+                s = sigma
+                l = _lambda
 
-    for i in kernel:
-        err = 0
-        s = l = 0
-        for sigma in range_sigma:
-            for _lambda in range_lambda:
 
-                clf = SVC(C=_lambda, gamma=1/sigma)
-                clf.fit(grid_X_train, grid_y_train)
-                temp = clf.score(grid_X_test, grid_y_test)
-                if err < temp:
-                    err = temp
-                    s = sigma
-                    l = _lambda
+    clf = SVC(C=l, gamma=1 / s, kernel='rbf')
+    clf.fit(X_train, y_train)
 
-        clf = SVC(C=l, gamma=1 / s)
-        clf.fit(X_train, y_train)
-
-        print("SVM :Score = {0}, _lambda = {1},"
+    print("SVM :Score = {0}, _lambda = {1},"
               "sigma = {2}, kernel = {3} Comment = {4}"
-              .format(clf.score(X_test, y_test), l, s, i, ""))
+              .format(clf.score(X_test, y_test), l, s, 'rbf', ""))
 
