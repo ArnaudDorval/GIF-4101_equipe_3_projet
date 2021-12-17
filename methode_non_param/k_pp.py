@@ -8,7 +8,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 
 
-def non_parametric_models(data, list, transform = 'norm'):
+def non_parametric_models(data, list):
     X, y = data()
     n = range(50, 1)
     X_train, X_test, y_train, y_test = train_test_split(X[list], y, test_size=0.25)

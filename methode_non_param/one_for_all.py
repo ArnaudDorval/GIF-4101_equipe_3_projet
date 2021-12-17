@@ -3,21 +3,14 @@ from data import Data
 import pandas as pd
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, minmax_scale
 from sklearn.multiclass import OneVsOneClassifier
-from sklearn import svm
-from sklearn.multioutput import MultiOutputRegressor
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.datasets import make_regression
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import mutual_info_classif
 import matplotlib.pyplot as plt
 
 list_param = ['HEURE', 'JOUR', 'TEMP', 'WEATHER_DESCRIPTION', 'HUMIDITY']
 #list_param = ['HEURE', 'JOUR', 'TEMP', 'WEATHER_DESCRIPTION', 'HUMIDITY', 'WEATHER', 'PREVIOUS']
-
 #"step_variation", "hourly_variation",
 #"mean", "none", min-max
+
 data = Data(classification="hourly_variation",normalization="min-max")
 X, y = data()
 

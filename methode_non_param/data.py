@@ -126,40 +126,6 @@ class Data:
         self.X, X_test, self.y, y_test = train_test_split(self.X, self.y, test_size=0.25)
         self.final_df = X_test
         self.final_df['target'] = y_test
-        """
-        if(type_y == "variation-1"):
-            # retourne des classes pour les differente variation heure par heure
-            self.y, self.explicit_y = pd.factorize(temp.mask(temp.isnull(), pd.NA).dropna())
-            self.X = self.X[:-1, :]
-            self.explicit_y = numpy.delete(self.explicit_y, 0)
-            self.y = numpy.delete(self.y, 0)
-
-        elif(type_y == "normalised_variation"):
-            # retourne la distribution entre [0,1] de la variation heure par heure
-            n = []
-            arr = numpy.asarray(temp.mask(temp.isnull(), pd.NA).dropna())
-            for i in arr:
-                n.append((i - min(arr)) / (max(arr) - min(arr)))
-            print("ok")
-            self.y = n
-            self.explicit_y = arr
-
-        elif (type_y == "civ_occ/civ_dispo"):
-            # retourne un y avec des classe pour le taux doccupation selon le step par défaut 25%
-            norm = numpy.zeros(round(_max / _step))
-            for i in range(len(norm)):
-                norm[i] = (i + 1) * _step
-
-            # Reformatting the data to get the class index from the number of used stretchers divided by the number of
-            # available stretchers rounded to closest step
-            reformat = numpy.vectorize(lambda x: min(norm, key=lambda y: abs(x - y)))
-            civ_occ = df['NB_CIV_OCC'].mask(temp.isnull(), pd.NA).dropna()
-            civ_disp = df['NB_CIV_FONC'].mask(temp.isnull(), pd.NA).dropna()
-            u = civ_disp/civ_occ
-            self.y, self.explicit_y = pd.factorize(reformat(u.array))
-
-        self.X = df
-        """
 
     def __call__(self):
         return self.X, self.y
