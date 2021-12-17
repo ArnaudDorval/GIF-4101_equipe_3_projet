@@ -49,7 +49,7 @@ cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';
 
 today = datetime.today().strftime("%d-%m-%Y")
 
-sql0 = "select * from MAIN";
+sql0 = "select * from MAIN"
 
 sql1 = "select * from MAIN where dbo.DATE_OF(LOCAL_TIME) = '%s'" %today
 
@@ -91,8 +91,8 @@ sql9 = """
        """
 
 
-#r0 = pd.read_sql(sql0, cnxn)
-r1 = pd.read_sql(sql1, cnxn)
+r0 = pd.read_sql(sql0, cnxn)
+#r1 = pd.read_sql(sql1, cnxn)
 #r2 = pd.read_sql(sql2, cnxn)
 #r3 = pd.read_sql(sql3, cnxn)
 #r4 = pd.read_sql(sql4, cnxn)
@@ -100,13 +100,13 @@ r1 = pd.read_sql(sql1, cnxn)
 #r6 = pd.read_sql(sql6, cnxn)
 #r7 = pd.read_sql(sql7, cnxn)
 #r8 = pd.read_sql(sql8, cnxn)
-r9 = pd.read_sql(sql9, cnxn)
+#r9 = pd.read_sql(sql9, cnxn)
 
 
-pd.set_option("display.max_colwidth", None) # Utile pour print des longues strings sans que pandas les truncate
+pd.set_option("display.max_columns", None) # Utile pour print des longues strings sans que pandas les truncate
 
-#print(r0)
-print(r1)
+print(r0)
+#print(r1)
 #print(r2)
 #print(r3)
 #print(r4)
@@ -114,4 +114,4 @@ print(r1)
 #print(r6)
 #print(r7)
 #print(r8)
-print(r9)
+#print(r9)
