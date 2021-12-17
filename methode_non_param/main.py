@@ -7,7 +7,7 @@ import numpy as np
 from cluster_test import *
 from cluster_gaussian_mixture import *
 
-list_param = ['HEURE', 'JOUR', 'TEMP', 'WEATHER_DESCRIPTION', 'HUMIDITY', 'WEATHER', 'PREVIOUS']
+list_param = ['HEURE', 'JOUR', 'TEMP', 'WEATHER_DESCRIPTION', 'HUMIDITY', 'WEATHER']
 
 def test_all_combination_knn(data):
     for r in range(len(list_param) + 1):
