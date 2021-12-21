@@ -1,0 +1,145 @@
+Nom_etablissement;Nom_installation;No_permis_installation;Nombre_de_civieres_fonctionnelles;Nombre_de_civieres_occupees;Nombre_de_patients_sur_civiere_plus_de_24_heures;Nombre_de_patients_sur_civiere_plus_de_48_heures;Heure_de_l'extraction_(image);Mise_a_jour;heure_meteo;temperature;climat;vent;humidex;humidite_relative
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;32;4;1;00:00:00;2021-12-20T0:28; 00:00 ;-12.7;Mainly Clear;WNW 5;NA;65
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;37;17;7;00:00:00;2021-12-20T0:28; 00:00 ;-12.7;Mainly Clear;WNW 5;NA;65
+CHU;L'Htel-Dieu de Qubec;51217586;15;13;1;0;00:00:00;2021-12-20T0:28; 00:00 ;-12.7;Mainly Clear;WNW 5;NA;65
+CHU;Hpital de l'Enfant-Jsus;51233914;48;50;15;3;00:00:00;2021-12-20T0:28; 00:00 ;-12.7;Mainly Clear;WNW 5;NA;65
+CHU;Hpital du Saint-Sacrement;51217529;22;14;1;0;00:00:00;2021-12-20T0:28; 00:00 ;-12.7;Mainly Clear;WNW 5;NA;65
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;17;0;0;00:00:00;2021-12-20T0:28; 00:00 ;-12.7;Mainly Clear;WNW 5;NA;65
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;31;3;1;01:00:00;2021-12-20T1:28; 01:00 ;-13.8;Mainly Clear;NW 5;NA;71
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;37;19;7;01:00:00;2021-12-20T1:28; 01:00 ;-13.8;Mainly Clear;NW 5;NA;71
+CHU;L'Htel-Dieu de Qubec;51217586;15;13;2;0;01:00:00;2021-12-20T1:28; 01:00 ;-13.8;Mainly Clear;NW 5;NA;71
+CHU;Hpital de l'Enfant-Jsus;51233914;48;52;15;3;01:00:00;2021-12-20T1:28; 01:00 ;-13.8;Mainly Clear;NW 5;NA;71
+CHU;Hpital du Saint-Sacrement;51217529;22;14;1;0;01:00:00;2021-12-20T1:28; 01:00 ;-13.8;Mainly Clear;NW 5;NA;71
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;16;0;0;01:00:00;2021-12-20T1:28; 01:00 ;-13.8;Mainly Clear;NW 5;NA;71
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;32;3;1;02:00:00;2021-12-20T2:28; 02:00 ;-16.8;Mainly Clear;S 4;NA;83
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;37;19;7;02:00:00;2021-12-20T2:28; 02:00 ;-16.8;Mainly Clear;S 4;NA;83
+CHU;L'Htel-Dieu de Qubec;51217586;15;14;2;0;02:00:00;2021-12-20T2:28; 02:00 ;-16.8;Mainly Clear;S 4;NA;83
+CHU;Hpital de l'Enfant-Jsus;51233914;48;57;14;3;02:00:00;2021-12-20T2:28; 02:00 ;-16.8;Mainly Clear;S 4;NA;83
+CHU;Hpital du Saint-Sacrement;51217529;22;15;1;0;02:00:00;2021-12-20T2:28; 02:00 ;-16.8;Mainly Clear;S 4;NA;83
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;14;0;0;02:00:00;2021-12-20T2:28; 02:00 ;-16.8;Mainly Clear;S 4;NA;83
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;32;2;1;03:00:00;2021-12-20T3:28; 03:00 ;-18.4;Mainly Clear;calm;NA;84
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;35;17;7;03:00:00;2021-12-20T3:28; 03:00 ;-18.4;Mainly Clear;calm;NA;84
+CHU;L'Htel-Dieu de Qubec;51217586;15;14;2;0;03:00:00;2021-12-20T3:28; 03:00 ;-18.4;Mainly Clear;calm;NA;84
+CHU;Hpital de l'Enfant-Jsus;51233914;48;57;14;3;03:00:00;2021-12-20T3:28; 03:00 ;-18.4;Mainly Clear;calm;NA;84
+CHU;Hpital du Saint-Sacrement;51217529;22;16;1;0;03:00:00;2021-12-20T3:28; 03:00 ;-18.4;Mainly Clear;calm;NA;84
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;14;0;0;03:00:00;2021-12-20T3:28; 03:00 ;-18.4;Mainly Clear;calm;NA;84
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;32;2;1;04:00:00;2021-12-20T4:28; 04:00 ;-17.2;Mainly Clear;SW 8;NA;83
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;36;16;7;04:00:00;2021-12-20T4:28; 04:00 ;-17.2;Mainly Clear;SW 8;NA;83
+CHU;L'Htel-Dieu de Qubec;51217586;15;16;2;0;04:00:00;2021-12-20T4:28; 04:00 ;-17.2;Mainly Clear;SW 8;NA;83
+CHU;Hpital de l'Enfant-Jsus;51233914;48;57;14;3;04:00:00;2021-12-20T4:28; 04:00 ;-17.2;Mainly Clear;SW 8;NA;83
+CHU;Hpital du Saint-Sacrement;51217529;22;17;2;0;04:00:00;2021-12-20T4:28; 04:00 ;-17.2;Mainly Clear;SW 8;NA;83
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;15;0;0;04:00:00;2021-12-20T4:28; 04:00 ;-17.2;Mainly Clear;SW 8;NA;83
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;35;3;1;05:00:00;2021-12-20T5:28; 05:00 ;-19.5;Mainly Clear;NW 5;NA;85
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;36;17;7;05:00:00;2021-12-20T5:28; 05:00 ;-19.5;Mainly Clear;NW 5;NA;85
+CHU;L'Htel-Dieu de Qubec;51217586;15;16;2;0;05:00:00;2021-12-20T5:28; 05:00 ;-19.5;Mainly Clear;NW 5;NA;85
+CHU;Hpital de l'Enfant-Jsus;51233914;48;58;15;3;05:00:00;2021-12-20T5:28; 05:00 ;-19.5;Mainly Clear;NW 5;NA;85
+CHU;Hpital du Saint-Sacrement;51217529;22;17;2;0;05:00:00;2021-12-20T5:28; 05:00 ;-19.5;Mainly Clear;NW 5;NA;85
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;16;0;0;05:00:00;2021-12-20T5:28; 05:00 ;-19.5;Mainly Clear;NW 5;NA;85
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;34;3;1;06:00:00;2021-12-20T6:28; 06:00 ;-19.4;Partly Cloudy;W 5;NA;83
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;36;17;7;06:00:00;2021-12-20T6:28; 06:00 ;-19.4;Partly Cloudy;W 5;NA;83
+CHU;L'Htel-Dieu de Qubec;51217586;15;18;2;0;06:00:00;2021-12-20T6:28; 06:00 ;-19.4;Partly Cloudy;W 5;NA;83
+CHU;Hpital de l'Enfant-Jsus;51233914;pas d'information disponible;pas d'information disponible;pas d'information disponible;pas d'information disponible;06:00:00;2021-12-20T6:28; 06:00 ;-19.4;Partly Cloudy;W 5;NA;83
+CHU;Hpital du Saint-Sacrement;51217529;22;17;2;0;06:00:00;2021-12-20T6:28; 06:00 ;-19.4;Partly Cloudy;W 5;NA;83
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;14;0;0;06:00:00;2021-12-20T6:28; 06:00 ;-19.4;Partly Cloudy;W 5;NA;83
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;35;4;1;07:00:00;2021-12-20T7:28; 07:00 ;-17.9;Mostly Cloudy;N 3;NA;84
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;34;17;7;07:00:00;2021-12-20T7:28; 07:00 ;-17.9;Mostly Cloudy;N 3;NA;84
+CHU;L'Htel-Dieu de Qubec;51217586;15;18;2;0;07:00:00;2021-12-20T7:28; 07:00 ;-17.9;Mostly Cloudy;N 3;NA;84
+CHU;Hpital de l'Enfant-Jsus;51233914;48;59;16;3;07:00:00;2021-12-20T7:28; 07:00 ;-17.9;Mostly Cloudy;N 3;NA;84
+CHU;Hpital du Saint-Sacrement;51217529;22;18;3;0;07:00:00;2021-12-20T7:28; 07:00 ;-17.9;Mostly Cloudy;N 3;NA;84
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;14;0;0;07:00:00;2021-12-20T7:28; 07:00 ;-17.9;Mostly Cloudy;N 3;NA;84
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;35;3;1;08:00:00;2021-12-20T8:28; 08:00 ;-16.8;Light Snow;NW 6;NA;82
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;33;17;7;08:00:00;2021-12-20T8:28; 08:00 ;-16.8;Light Snow;NW 6;NA;82
+CHU;L'Htel-Dieu de Qubec;51217586;15;18;2;0;08:00:00;2021-12-20T8:28; 08:00 ;-16.8;Light Snow;NW 6;NA;82
+CHU;Hpital de l'Enfant-Jsus;51233914;48;58;16;4;08:00:00;2021-12-20T8:28; 08:00 ;-16.8;Light Snow;NW 6;NA;82
+CHU;Hpital du Saint-Sacrement;51217529;22;18;4;0;08:00:00;2021-12-20T8:28; 08:00 ;-16.8;Light Snow;NW 6;NA;82
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;14;1;0;08:00:00;2021-12-20T8:28; 08:00 ;-16.8;Light Snow;NW 6;NA;82
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;36;3;1;09:00:00;2021-12-20T9:28; 09:00 ;-14.5;Light Snow;WSW 10;NA;89
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;34;17;8;09:00:00;2021-12-20T9:28; 09:00 ;-14.5;Light Snow;WSW 10;NA;89
+CHU;L'Htel-Dieu de Qubec;51217586;15;18;2;0;09:00:00;2021-12-20T9:28; 09:00 ;-14.5;Light Snow;WSW 10;NA;89
+CHU;Hpital de l'Enfant-Jsus;51233914;48;64;16;5;09:00:00;2021-12-20T9:28; 09:00 ;-14.5;Light Snow;WSW 10;NA;89
+CHU;Hpital du Saint-Sacrement;51217529;22;19;4;0;09:00:00;2021-12-20T9:28; 09:00 ;-14.5;Light Snow;WSW 10;NA;89
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;15;1;0;09:00:00;2021-12-20T9:28; 09:00 ;-14.5;Light Snow;WSW 10;NA;89
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;44;5;1;10:00:00;2021-12-20T10:28; 10:00 ;-14.2;Light Snow;W 9;NA;85
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;35;19;8;10:00:00;2021-12-20T10:28; 10:00 ;-14.2;Light Snow;W 9;NA;85
+CHU;L'Htel-Dieu de Qubec;51217586;15;17;2;0;10:00:00;2021-12-20T10:28; 10:00 ;-14.2;Light Snow;W 9;NA;85
+CHU;Hpital de l'Enfant-Jsus;51233914;48;63;15;5;10:00:00;2021-12-20T10:28; 10:00 ;-14.2;Light Snow;W 9;NA;85
+CHU;Hpital du Saint-Sacrement;51217529;22;19;4;0;10:00:00;2021-12-20T10:28; 10:00 ;-14.2;Light Snow;W 9;NA;85
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;16;1;0;10:00:00;2021-12-20T10:28; 10:00 ;-14.2;Light Snow;W 9;NA;85
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;45;3;1;11:00:00;2021-12-20T11:28; 11:00 ;-12.9;Ice Crystals;WSW 11;NA;80
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;36;20;10;11:00:00;2021-12-20T11:28; 11:00 ;-12.9;Ice Crystals;WSW 11;NA;80
+CHU;L'Htel-Dieu de Qubec;51217586;15;17;3;0;11:00:00;2021-12-20T11:28; 11:00 ;-12.9;Ice Crystals;WSW 11;NA;80
+CHU;Hpital de l'Enfant-Jsus;51233914;48;60;16;5;11:00:00;2021-12-20T11:28; 11:00 ;-12.9;Ice Crystals;WSW 11;NA;80
+CHU;Hpital du Saint-Sacrement;51217529;22;21;5;0;11:00:00;2021-12-20T11:28; 11:00 ;-12.9;Ice Crystals;WSW 11;NA;80
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;18;0;0;11:00:00;2021-12-20T11:28; 11:00 ;-12.9;Ice Crystals;WSW 11;NA;80
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;47;4;1;12:00:00;2021-12-20T12:28; 12:00 ;-11.6;Mostly Cloudy;WSW 9;NA;72
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;39;19;10;12:00:00;2021-12-20T12:28; 12:00 ;-11.6;Mostly Cloudy;WSW 9;NA;72
+CHU;L'Htel-Dieu de Qubec;51217586;15;17;3;0;12:00:00;2021-12-20T12:28; 12:00 ;-11.6;Mostly Cloudy;WSW 9;NA;72
+CHU;Hpital de l'Enfant-Jsus;51233914;48;55;14;4;12:00:00;2021-12-20T12:28; 12:00 ;-11.6;Mostly Cloudy;WSW 9;NA;72
+CHU;Hpital du Saint-Sacrement;51217529;22;21;4;0;12:00:00;2021-12-20T12:28; 12:00 ;-11.6;Mostly Cloudy;WSW 9;NA;72
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;21;0;0;12:00:00;2021-12-20T12:28; 12:00 ;-11.6;Mostly Cloudy;WSW 9;NA;72
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;42;2;0;13:00:00;2021-12-20T13:28; 13:00 ;-10.5;Mostly Cloudy;WSW 4;NA;68
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;40;18;8;13:00:00;2021-12-20T13:28; 13:00 ;-10.5;Mostly Cloudy;WSW 4;NA;68
+CHU;L'Htel-Dieu de Qubec;51217586;15;18;2;0;13:00:00;2021-12-20T13:28; 13:00 ;-10.5;Mostly Cloudy;WSW 4;NA;68
+CHU;Hpital de l'Enfant-Jsus;51233914;48;57;17;4;13:00:00;2021-12-20T13:28; 13:00 ;-10.5;Mostly Cloudy;WSW 4;NA;68
+CHU;Hpital du Saint-Sacrement;51217529;22;22;4;0;13:00:00;2021-12-20T13:28; 13:00 ;-10.5;Mostly Cloudy;WSW 4;NA;68
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;20;0;0;13:00:00;2021-12-20T13:28; 13:00 ;-10.5;Mostly Cloudy;WSW 4;NA;68
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;42;2;0;14:00:00;2021-12-20T14:28; 14:00 ;-10.1;Mostly Cloudy;WSW 7;NA;68
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;42;18;9;14:00:00;2021-12-20T14:28; 14:00 ;-10.1;Mostly Cloudy;WSW 7;NA;68
+CHU;L'Htel-Dieu de Qubec;51217586;15;18;3;0;14:00:00;2021-12-20T14:28; 14:00 ;-10.1;Mostly Cloudy;WSW 7;NA;68
+CHU;Hpital de l'Enfant-Jsus;51233914;48;55;15;2;14:00:00;2021-12-20T14:28; 14:00 ;-10.1;Mostly Cloudy;WSW 7;NA;68
+CHU;Hpital du Saint-Sacrement;51217529;22;20;4;0;14:00:00;2021-12-20T14:28; 14:00 ;-10.1;Mostly Cloudy;WSW 7;NA;68
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;21;0;0;14:00:00;2021-12-20T14:28; 14:00 ;-10.1;Mostly Cloudy;WSW 7;NA;68
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;44;1;0;15:00:00;2021-12-20T15:28; 15:00 ;-9.5;Mostly Cloudy;WNW 3;NA;69
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;43;18;9;15:00:00;2021-12-20T15:28; 15:00 ;-9.5;Mostly Cloudy;WNW 3;NA;69
+CHU;L'Htel-Dieu de Qubec;51217586;15;19;3;0;15:00:00;2021-12-20T15:28; 15:00 ;-9.5;Mostly Cloudy;WNW 3;NA;69
+CHU;Hpital de l'Enfant-Jsus;51233914;48;51;13;0;15:00:00;2021-12-20T15:28; 15:00 ;-9.5;Mostly Cloudy;WNW 3;NA;69
+CHU;Hpital du Saint-Sacrement;51217529;22;21;5;0;15:00:00;2021-12-20T15:28; 15:00 ;-9.5;Mostly Cloudy;WNW 3;NA;69
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;22;1;0;15:00:00;2021-12-20T15:28; 15:00 ;-9.5;Mostly Cloudy;WNW 3;NA;69
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;42;1;0;16:00:00;2021-12-20T16:28; 16:00 ;-9.5;Mostly Cloudy;ENE 3;NA;71
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;45;20;10;16:00:00;2021-12-20T16:28; 16:00 ;-9.5;Mostly Cloudy;ENE 3;NA;71
+CHU;L'Htel-Dieu de Qubec;51217586;15;19;4;0;16:00:00;2021-12-20T16:28; 16:00 ;-9.5;Mostly Cloudy;ENE 3;NA;71
+CHU;Hpital de l'Enfant-Jsus;51233914;48;51;13;0;16:00:00;2021-12-20T16:28; 16:00 ;-9.5;Mostly Cloudy;ENE 3;NA;71
+CHU;Hpital du Saint-Sacrement;51217529;22;18;5;0;16:00:00;2021-12-20T16:28; 16:00 ;-9.5;Mostly Cloudy;ENE 3;NA;71
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;22;0;0;16:00:00;2021-12-20T16:28; 16:00 ;-9.5;Mostly Cloudy;ENE 3;NA;71
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;35;1;0;17:00:00;2021-12-20T17:28; 17:00 ;-9.3;Light Snow;NNE 6;NA;72
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;42;20;10;17:00:00;2021-12-20T17:28; 17:00 ;-9.3;Light Snow;NNE 6;NA;72
+CHU;L'Htel-Dieu de Qubec;51217586;15;19;5;0;17:00:00;2021-12-20T17:28; 17:00 ;-9.3;Light Snow;NNE 6;NA;72
+CHU;Hpital de l'Enfant-Jsus;51233914;48;49;13;0;17:00:00;2021-12-20T17:28; 17:00 ;-9.3;Light Snow;NNE 6;NA;72
+CHU;Hpital du Saint-Sacrement;51217529;22;19;6;0;17:00:00;2021-12-20T17:28; 17:00 ;-9.3;Light Snow;NNE 6;NA;72
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;21;0;0;17:00:00;2021-12-20T17:28; 17:00 ;-9.3;Light Snow;NNE 6;NA;72
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;33;1;0;18:00:00;2021-12-20T18:28; 18:00 ;-9.7;Mostly Cloudy;NNE 5;NA;79
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;42;21;10;18:00:00;2021-12-20T18:28; 18:00 ;-9.7;Mostly Cloudy;NNE 5;NA;79
+CHU;L'Htel-Dieu de Qubec;51217586;15;19;3;0;18:00:00;2021-12-20T18:28; 18:00 ;-9.7;Mostly Cloudy;NNE 5;NA;79
+CHU;Hpital de l'Enfant-Jsus;51233914;48;49;12;0;18:00:00;2021-12-20T18:28; 18:00 ;-9.7;Mostly Cloudy;NNE 5;NA;79
+CHU;Hpital du Saint-Sacrement;51217529;22;21;6;0;18:00:00;2021-12-20T18:28; 18:00 ;-9.7;Mostly Cloudy;NNE 5;NA;79
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;21;1;0;18:00:00;2021-12-20T18:28; 18:00 ;-9.7;Mostly Cloudy;NNE 5;NA;79
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;31;1;0;19:00:00;2021-12-20T19:28; 19:00 ;-9.7;Light Snow;N 7;NA;83
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;40;21;10;19:00:00;2021-12-20T19:28; 19:00 ;-9.7;Light Snow;N 7;NA;83
+CHU;L'Htel-Dieu de Qubec;51217586;15;18;2;0;19:00:00;2021-12-20T19:28; 19:00 ;-9.7;Light Snow;N 7;NA;83
+CHU;Hpital de l'Enfant-Jsus;51233914;48;50;10;0;19:00:00;2021-12-20T19:28; 19:00 ;-9.7;Light Snow;N 7;NA;83
+CHU;Hpital du Saint-Sacrement;51217529;22;21;6;0;19:00:00;2021-12-20T19:28; 19:00 ;-9.7;Light Snow;N 7;NA;83
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;18;0;0;19:00:00;2021-12-20T19:28; 19:00 ;-9.7;Light Snow;N 7;NA;83
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;31;1;0;20:00:00;2021-12-20T20:28; 20:00 ;-9.6;Light Snow;N 7;NA;88
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;39;19;9;20:00:00;2021-12-20T20:28; 20:00 ;-9.6;Light Snow;N 7;NA;88
+CHU;L'Htel-Dieu de Qubec;51217586;15;18;2;0;20:00:00;2021-12-20T20:28; 20:00 ;-9.6;Light Snow;N 7;NA;88
+CHU;Hpital de l'Enfant-Jsus;51233914;48;53;10;0;20:00:00;2021-12-20T20:28; 20:00 ;-9.6;Light Snow;N 7;NA;88
+CHU;Hpital du Saint-Sacrement;51217529;22;22;6;0;20:00:00;2021-12-20T20:28; 20:00 ;-9.6;Light Snow;N 7;NA;88
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;14;0;0;20:00:00;2021-12-20T20:28; 20:00 ;-9.6;Light Snow;N 7;NA;88
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;27;0;0;21:00:00;2021-12-20T21:28; 21:00 ;-9.1;Light Snow;N 9;NA;83
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;38;19;10;21:00:00;2021-12-20T21:28; 21:00 ;-9.1;Light Snow;N 9;NA;83
+CHU;L'Htel-Dieu de Qubec;51217586;15;15;2;0;21:00:00;2021-12-20T21:28; 21:00 ;-9.1;Light Snow;N 9;NA;83
+CHU;Hpital de l'Enfant-Jsus;51233914;48;51;9;0;21:00:00;2021-12-20T21:28; 21:00 ;-9.1;Light Snow;N 9;NA;83
+CHU;Hpital du Saint-Sacrement;51217529;22;20;6;0;21:00:00;2021-12-20T21:28; 21:00 ;-9.1;Light Snow;N 9;NA;83
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;14;0;0;21:00:00;2021-12-20T21:28; 21:00 ;-9.1;Light Snow;N 9;NA;83
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;28;0;0;22:00:00;2021-12-20T22:28; 22:00 ;-8.9;Light Snow;N 4;NA;86
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;37;19;10;22:00:00;2021-12-20T22:28; 22:00 ;-8.9;Light Snow;N 4;NA;86
+CHU;L'Htel-Dieu de Qubec;51217586;15;16;2;0;22:00:00;2021-12-20T22:28; 22:00 ;-8.9;Light Snow;N 4;NA;86
+CHU;Hpital de l'Enfant-Jsus;51233914;48;46;9;0;22:00:00;2021-12-20T22:28; 22:00 ;-8.9;Light Snow;N 4;NA;86
+CHU;Hpital du Saint-Sacrement;51217529;22;18;5;0;22:00:00;2021-12-20T22:28; 22:00 ;-8.9;Light Snow;N 4;NA;86
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;17;0;0;22:00:00;2021-12-20T22:28; 22:00 ;-8.9;Light Snow;N 4;NA;86
+CHU;Le Centre hospitalier de l'Universit Laval;51217594;43;23;0;0;23:00:00;2021-12-20T23:28; 23:00 ;-8.6;Light Snow;calm;NA;91
+CHU;Hpital Saint-Franois-d'Assise;51217602;34;37;18;9;23:00:00;2021-12-20T23:28; 23:00 ;-8.6;Light Snow;calm;NA;91
+CHU;L'Htel-Dieu de Qubec;51217586;15;15;1;0;23:00:00;2021-12-20T23:28; 23:00 ;-8.6;Light Snow;calm;NA;91
+CHU;Hpital de l'Enfant-Jsus;51233914;48;45;9;1;23:00:00;2021-12-20T23:28; 23:00 ;-8.6;Light Snow;calm;NA;91
+CHU;Hpital du Saint-Sacrement;51217529;22;19;6;0;23:00:00;2021-12-20T23:28; 23:00 ;-8.6;Light Snow;calm;NA;91
+Institut universitaire de cardiologie et de pneumologie de Qubec;Institut universitaire de cardiologie et de pneumologie de Qubec;51232130;20;15;0;0;23:00:00;2021-12-20T23:28; 23:00 ;-8.6;Light Snow;calm;NA;91
